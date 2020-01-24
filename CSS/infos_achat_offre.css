@@ -22,6 +22,8 @@ a:hover{
 
 .main p{
 	color: #F2D57E;
+	text-align: justify;
+	padding: 20px;
 }
 
 .main .personnes{
@@ -35,6 +37,16 @@ a:hover{
 
 .main .liste{
 	color:#F2D57E;	
+}
+
+.main .liste{
+	display: inline-block;
+	line-height: 25px;
+}
+
+.main #achat{
+	margin-left: 80%;
+	display: inline-block;
 }
 
 .row{  
