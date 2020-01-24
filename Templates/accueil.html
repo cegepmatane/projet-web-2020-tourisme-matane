@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/accueil.css">
         <title>Tourisme-Matane</title>
     </head>
     <body>
@@ -9,18 +10,20 @@
 
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
-        <button>Découvrir notre compagnie</button>
-        <video src="https://www.youtube.com/embed/kppe8lJQ31Q" id="video-accueil"></video>
+        <button id="discover-button">Découvrir notre compagnie</button>
+        <iframe id="video-accueil" src="https://www.youtube.com/embed/kppe8lJQ31Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <hr/>
 
         <h1>Rechercher une destination</h1>
-        <form onsubmit="">
-            <input type="search">
-            <img src="../img/plane.png">
-            <input type="search">
-            <input type="date">
-            <button type="submit">Rechercher</button>
+        <form id="form-search-destination" onsubmit="">
+            <div>
+                <input id="search-destination-depart" class="search-input" type="search">
+                <img id="plane-icone" src="../img/plane.png">
+                <input id="search-destination-arrivee" class="search-input" type="search">
+            </div>
+            <input id="search-destination-date-picker" class="search-input" type="date">
+            <button id="button-submit-search-destination" type="submit">Rechercher</button>
         </form>
 
         <hr/>

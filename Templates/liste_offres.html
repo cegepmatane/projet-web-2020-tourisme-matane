@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tourisme Matane</title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="../img/logo_temporaire.jpg" alt="Logo Tourisme Matane" title="Tourisme Matane">
+            </a>
+    
+            <nav role="navigation"> 
+                <ul>
+                    <!-- Dans le css, organiser la liste à l'horizontale -->
+                    <li> 
+                        <a href="accueil.html" title="Accueil">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="liste_offres" title="Offres">Offres</a>
+                    </li>
+                    <li>
+                        <a href="mission.html" title="A propos de nous" >A propos de nous</a>
+                    </li>
+                </ul>
+    
+                </nav>
+                <!-- Mettre en forme le form avec le CSS -->
+                <form>
+                    <input type="text" name="recherche">
+                    <input type="submit" name="rechercher" value="Recherche">
+                </form>
+    
+                <nav role="navigation"> 
+                    <ul>
+                      <!-- Dans le css, organiser la liste à l'horizontale -->
+                        <li> 
+                            <a href="" title="FR">FR</a>
+                        </li>
+                        <li>
+                            <a href="" title="EN">EN</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+    
+                <a href="connexion.html">
+                    Profil
+                    <img src="../img/profil.jpg" alt="Icone Profil" title="Profil">
+                </a>
+    
+              <div class="block button button_a1teogbq" id="button_a1teogbq">
+                <a class="button" href="/nous-joindre" target="_self">
+                      Soumission gratuite
+                </a>
+              </div>
+    
+        </header>
+    
+        <div class="searchbar-filter">
+            <form action="GET" class="formulaire">
+                <input class="champ" type="text" value="Destination"/>
+                <select name="filtre">
+                    <option value="nouveaute">Nouveauté</option>
+                    <option value="prix_moins_to_plus">Du - cher au + cher</option>
+                    <option value="prix_plus_to_moins">Du + cher au - cher</option>
+                    <option value="genre">Genre</option>
+                    <option value="alphabétique">Ordre alphabétique</option>
+                    <option value="alphabétique_inverse">Ordre alphabétique inverse</option>
+
+                </select>
+            </form>
+        </div>
+        <div class="recherche-avancee">
+            <form action="">
+                <input class="date" type="date">
+                Prix : <input class="prix" type="range" name="points" min="0" max="10">
+                <select name="genre">
+                    <option value="musique">Musique</option>
+                    <option value="soiree">Soirée</option>
+                    <option value="culture">Culture</option>
+                    <option value="exploration">Exploration</option>
+                </select>
+                <input class="bouton" type="button" value="Rechercher" />
+            </form>
+        </div>
+        <div class="lig">
+            <!-- Boucle pour chaque activité -->
+            <div class="offre">
+                <img src="../img/logo_temporaire.jpg" alt="image offre">
+                <h3>Nom de l'activité</h3>
+                <p>date</p>
+                <p>horaire</p>
+                <p>prix</p>
+                <p><a href="#"> >> Plus d'info </a></p>
+            </div>
+            <div class="offre">
+                <img src="../img/logo_temporaire.jpg" alt="image offre">
+                <h3>Nom de l'activité</h3>
+                <p>date</p>
+                <p>horaire</p>
+                <p>prix</p>
+                <p><a href="#"> >> Plus d'info </a></p>
+            </div>
+            <div class="offre">
+                <img src="../img/logo_temporaire.jpg" alt="image offre">
+                <h3>Nom de l'activité</h3>
+                <p>date</p>
+                <p>horaire</p>
+                <p>prix</p>
+                <p><a href="#"> >> Plus d'info </a></p>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                  <li> 
+                    <a href="accueil.html" title="Accueil">Accueil</a>
+                 </li>
+                  <li>
+                    <a href="liste_offres" title="Offres">Offres</a>
+                  </li>
+                  <li>
+                       <a href="mission.html" title="A propos de nous" >A propos de nous</a>
+                  </li>
+            </ul>
+    
+            <p>
+                Des petites infos sur l'entreprise<br>
+                Des mails pour contacter<br>
+                Des téléphones pour contacter
+            </p>
+    
+        </footer>
+    </body>
+</html>
+
