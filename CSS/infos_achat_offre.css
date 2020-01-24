@@ -1,0 +1,67 @@
+body{
+	background-color: #101C31;
+}
+
+a{
+	color: #D9A566;
+}
+
+a:hover{
+	color: #B36A8F;
+}
+
+.side{
+  flex: 30%;
+  margin-bottom: 10px;
+}
+
+.main{
+  flex: 70%;
+  background-color: #274873;
+}
+
+.main p{
+	color: #F2D57E;
+	text-align: justify;
+	padding: 20px;
+}
+
+.main .personnes{
+	list-style-type:none;
+	color:#F2D57E;
+}
+
+.main .personnes li{
+	margin-bottom: 10px;
+}
+
+.main .liste{
+	color:#F2D57E;	
+}
+
+.main .liste{
+	display: inline-block;
+	line-height: 25px;
+}
+
+.main #achat{
+	margin-left: 80%;
+	display: inline-block;
+}
+
+.row{  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img{
+	max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2{
+	color: #D9A566;;
+}
