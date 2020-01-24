@@ -1,0 +1,57 @@
+/* Titre de la page en haut au centre */
+.titre-page {
+    text-align: center;
+}
+
+
+/* Les paragraphes de présentation + images */
+.paragraphe {
+    display: flex;
+    align-items: center;
+    margin: 0 5vw;
+}
+
+.premier-paragraphe, .deuxieme-paragraphe {
+    margin: 2vw;
+}
+
+.avion, .bar {
+    width: 30vw;
+    margin: 2vw;
+    border-radius: 2%;
+}
+
+
+/* Photos des membres de l'équipe alignées + leurs infos */
+.equipe {
+    margin: 0 10vw;
+}
+
+.liste-membres {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.membre {
+    text-align: center;
+    margin: 2 2%;
+    min-width: 250px;
+}
+
+.photo-quentin, .photo-loris, .photo-florian, .photo-alexandre {
+    border-radius: 20%;
+}
+
+.nom {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1%;
+}
+
+.mail {
+    color: rgb(70, 70, 70);
+    text-align: center;
+    margin: 1%;
+}
