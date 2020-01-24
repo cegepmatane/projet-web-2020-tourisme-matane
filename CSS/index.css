@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+header .img_accueil{
+    width: 2cm;
+}
+header nav ul li{
+    display: inline-block;
+}
+header .nav_recherche{
+    flex-grow: 4;
+    margin-top: 1%;
+    text-align: right;
+}
+header .nav_right{
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 3%;
+}
+
+
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer p{
+    text-align: right;
+    padding-right: 3cm;
+    flex-grow: 8;
+}
+footer ul li{
+    list-style-type: none;
+}
