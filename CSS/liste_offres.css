@@ -1,4 +1,4 @@
 .lig{
     display: flex;
-    flex: 33%;
+    flex-wrap: wrap;
 }
