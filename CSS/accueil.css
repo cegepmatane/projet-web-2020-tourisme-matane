@@ -94,7 +94,9 @@ body{
 
     background:#aaa;
     border-radius:50%;
-    color:whitesmoke;
+    background-color: #274873;
+	color: #D9A566;
+    border-color: #fafafa;
 }
 
 #div-with-submit-button{
@@ -104,15 +106,16 @@ body{
 
 @keyframes button-search {
     from {
-        background:#fafafa;
+        background-color:#0dc6db;
         border-radius:50%;
-        color:#555;
+        color: #D9A566;
     }
 
     to {
         background:#aaa;
         border-radius:50%;
-        color:#fafafa;
+        background-color: #274873;
+    	color: #D9A566;
         border-color: #fafafa;
     }
 }
@@ -127,7 +130,7 @@ a{
 
     text-align: center;
 
-    background-color: #fafafa;
+    background-color: #274873;
     font-size: 1vw;
 
     border-style: solid;
