@@ -12,7 +12,7 @@ a:hover{
 
 .side{
   flex: 30%;
-  margin-bottom: 10px;
+  background-color: #274873;
 }
 
 .main{
@@ -56,6 +56,7 @@ a:hover{
 
 .img{
 	max-width: 100%;
+	background-color: #274873;
 }
 
 * {
@@ -63,5 +64,5 @@ a:hover{
 }
 
 h1, h2{
-	color: #D9A566;;
+	color: #D9A566;
 }
