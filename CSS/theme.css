@@ -1,0 +1,29 @@
+body{
+    background-color: #101C31;
+    overflow-y: fragments;
+    overflow-x: hidden;
+}
+header iframe{
+    width: 90vw;
+    height: 8vw
+}
+
+a{
+    color: #D9A566;
+}
+
+a:hover{
+    color: #B36A8F;
+}
+* {
+    box-sizing: border-box;
+}
+
+h1, h2{
+    color: #D9A566;
+}
+p{
+    color: #F2D57E;
+    text-align: justify;
+    padding: 20px;
+}
