@@ -19,9 +19,10 @@ a:hover{
     box-sizing: border-box;
 }
 
-h1, h2{
+h1, h2, h4{
     color: #D9A566;
 }
+
 p{
     color: #F2D57E;
     text-align: justify;
