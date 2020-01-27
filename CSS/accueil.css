@@ -17,10 +17,11 @@ body{
     border-radius:75%;
     border-bottom:7px solid #4753f3;
     font:bold 0.75vw Arial;
-    color:#555;
     background:#fff;
     box-shadow:2px 2px 3px #999;
-    border-top:2px solid #59cd27;
+    border-top:2px solid #101C31;
+    background-color: #274873;
+    color: #D9A566;
 }
 #discover-button:hover{
     animation-duration: 0.5s;
@@ -80,10 +81,11 @@ body{
     width:6vw;
     height:6vw;
     background:#fafafa;
-    box-shadow:2px 2px 8px #aaa;
+    box-shadow:2px 2px 8px #2c0bd1;
     font:bold 0.75vw Arial;
     border-radius:50%;
-    color:#555;
+    background-color: #274873;
+    color: #D9A566;
 }
 
 #button-submit-search-destination:hover {
