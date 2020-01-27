@@ -2,3 +2,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+.lig .offre{
+    margin: auto;
+    margin-top: 1%;
+}
+p{
+    padding: 0;
+}
