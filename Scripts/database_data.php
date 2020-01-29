@@ -2,7 +2,7 @@
 
 $server = "mysql";
 $host = "localhost:3307";
-$base = "???";
+$base = "bddtourisme";
 $user = "root";
 $pass = "";
 

@@ -40,9 +40,15 @@
 
         <h1>Nos destinations les plus visitées</h1>
         <?php
-
-
-
+            include ('../Scripts/get_all_destinations.php');
+            foreach (get_all_destination() as $tab){
+                $html = "<a href=\'#\'>";
+                $html .= "<div class=\"div-destination\">";
+                $html .= "<img src=\'".$tab["url_image"]."\' class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+                $html .= "<p class=\"text-destination\">".$tab["description"]."</p>";
+                $html .= "</div></a>";
+                echo $html;
+            }
         ?>
         <a href="#">
             <div class="div-destination">
@@ -50,19 +56,6 @@
                 <p class="text-destination">Sed laeditur hic coetuum magnificus splendor levitate paucorum incondita, ubi nati sunt non reputantium, sed tamquam indulta licentia vitiis ad errores lapsorum ac lasciviam. ut enim Simonides lyricus docet, beate perfecta ratione vieturo ante alia patriam esse convenit gloriosam.</p>
             </div>
         </a>
-        <a href="#">
-            <div class="div-destination">
-                <img src="../img/logo_temporaire.jpg" class="img-destination" alt="Image représentant la destination"/>
-                <p class="text-destination">Sed laeditur hic coetuum magnificus splendor levitate paucorum incondita, ubi nati sunt non reputantium, sed tamquam indulta licentia vitiis ad errores lapsorum ac lasciviam. ut enim Simonides lyricus docet, beate perfecta ratione vieturo ante alia patriam esse convenit gloriosam.</p>
-            </div>
-        </a>
-        <a href="#">
-            <div class="div-destination">
-                <img src="../img/logo_temporaire.jpg" class="img-destination" alt="Image représentant la destination"/>
-                <p class="text-destination">Sed laeditur hic coetuum magnificus splendor levitate paucorum incondita, ubi nati sunt non reputantium, sed tamquam indulta licentia vitiis ad errores lapsorum ac lasciviam. ut enim Simonides lyricus docet, beate perfecta ratione vieturo ante alia patriam esse convenit gloriosam.</p>
-            </div>
-        </a>
-
         <hr/>
 
         <footer>
