@@ -45,9 +45,10 @@
                 $html = "<a href=\"#\">";
                 $html .= "<div class=\"div-destination\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+                $html .= "<div>";
                 $html .= "<p class=\"text-destination\">".$tab["description"]."</p>";
-                $html .= "<p class=\"text-destination\">\n Prix : ".$tab["prix"]." €</p>";
-                $html .= "</div></a>";
+                $html .= "<p class=\"text-destination\">Prix : ".$tab["prix"]." €</p>";
+                $html .= "</div></div></a>";
                 echo $html;
             }
         ?>
