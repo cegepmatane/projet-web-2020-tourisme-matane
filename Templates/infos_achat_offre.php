@@ -37,7 +37,7 @@
 
   <div class="main">
     <p>
-      Du <input type="date" name="debut"> au <input type="date" name="fin"> (jours selectionnés inclus)
+      Du <input type="date" name="debut" <?php $date = new DateTime($res[2]["debut"]); echo "value=\"".$date->format("Y-m-d")."\""?> > au <input type="date" name="fin" <?php $date->add(new DateInterval("P".$res[2]["duree"]."D")); echo "value=\"".$date->format("Y-m-d")."\""?> > (jours selectionnés inclus)
     </p>
   </div>
   <div class="main">
