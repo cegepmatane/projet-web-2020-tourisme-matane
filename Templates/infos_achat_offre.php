@@ -1,6 +1,9 @@
 <?php
     include ('../Scripts/get_all_destinations.php');
     $res = get_all_destination();
+    $nombre_adultes = 0;
+    $nombre_enfants = 0;
+    $nombre_animaux = 0;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,9 +43,9 @@
   <div class="main">
     <h2>Nombre de personnes</h2>
     <ul class="personnes">
-      <li><input type="number" name="adultes"> adultes(+18ans)</li>
-      <li><input type="number" name="enfants"> enfants(-18ans)</li>
-      <li><input type="number" name="animaux"> animaux</li>
+      <li><input type="number" name="adultes" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans)</li>
+      <li><input type="number" name="enfants" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans)</li>
+      <li><input type="number" name="animaux" <?php echo "value=\"".$nombre_animaux."\""?> > animaux</li>
     </ul>
   </div>
 
@@ -62,7 +65,7 @@
     <div id="achat">
       <p>
           <?php
-              echo $res[2]["prix"]." €";
+              echo ($nombre_adultes*60+$nombre_enfants*30+$nombre_animaux*10)." €";
           ?>
       </p>
       <button>Acheter</button>
