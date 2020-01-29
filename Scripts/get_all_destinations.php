@@ -1,5 +1,4 @@
 <?php
-include('database_data.php');
     function get_all_destination()
     {
         $server = "mysql";
