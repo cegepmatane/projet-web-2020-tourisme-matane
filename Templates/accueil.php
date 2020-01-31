@@ -10,6 +10,7 @@
     </head>
     <body>
         <?php include("header.html"); ?>
+        <hr/>
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
         <a href="mission.php">

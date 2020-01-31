@@ -10,6 +10,7 @@
     </head>
     <body>
         <?php include("header.html"); ?>
+        <hr/>
         <h1 class="titre-page">A propos de nous</h1>
 
         <div class="paragraphe">
