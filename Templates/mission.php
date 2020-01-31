@@ -3,17 +3,13 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../CSS/theme.css">
+        <link rel="stylesheet" href="../CSS/index.css">
         <link rel="stylesheet" href="../CSS/mission.css">
         <title>A propos de nous</title>
         <base target="_parent">
     </head>
     <body>
-        <header>
-            <center>
-                <iframe src="header.html" align="top" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-            </center>
-        </header>
-        <hr/>
+        <?php include("header.html"); ?>
         <h1 class="titre-page">A propos de nous</h1>
 
         <div class="paragraphe">
@@ -54,8 +50,7 @@
             </ul>
         </div>
         <hr/>
-        <footer>
-            <iframe src="footer.html" align="bottom" frameborder="0" marginheight="0" marginwidth="0" style="margin: -0.5vw -0vw -0.5vw -0.5vw;width: 100vw;height: 8vw;"></iframe>
-        </footer>
+
+        <?php include("footer.html"); ?>
     </body>
 </html>

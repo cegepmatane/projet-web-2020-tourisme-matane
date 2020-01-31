@@ -20,11 +20,11 @@ header .nav_right{
     margin-right: 3%;
 }
 
-a{
+header a{
     color: #D9A566;
 }
 
-a:hover{
+header a:hover{
     color: #B36A8F;
 }
 

@@ -9,3 +9,46 @@
 p{
     padding: 0;
 }
+
+img{
+    max-width: 500px;
+    max-height: 300px;
+}
+
+@keyframes button-search {
+    from {
+        background-color:#0dc6db;
+        border-radius:50%;
+        color: #D9A566;
+    }
+
+    to {
+        background:#aaa;
+        border-radius:50%;
+        background-color: #274873;
+        color: #D9A566;
+        border-color: #fafafa;
+    }
+}
+
+.lig form #button{
+    width:6vw;
+    height:6vw;
+    background:#fafafa;
+    box-shadow:2px 2px 8px #2c0bd1;
+    font:bold 0.75vw Arial;
+    border-radius:50%;
+    background-color: #274873;
+    color: #D9A566;
+}
+
+.lig form #button:hover {
+    animation-duration: 0.5s;
+    animation-name: button-search;
+
+    background:#aaa;
+    border-radius:50%;
+    background-color: #274873;
+    color: #D9A566;
+    border-color: #fafafa;
+}

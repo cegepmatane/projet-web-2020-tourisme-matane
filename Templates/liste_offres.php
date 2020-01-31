@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -42,31 +43,26 @@
             </form>
         </div>
         <div class="lig">
+            <input type="hidden" name="id" value="">
             <!-- Boucle pour chaque activité -->
-            <div class="offre">
-                <img src="../img/logo_temporaire.jpg" alt="image offre">
-                <h1>Nom de l'activité</h1>
-                <p>date</p>
-                <p>horaire</p>
-                <p>prix</p>
-                <p><a href="./infos_achat_offre.php"> >> Plus d'info </a></p>
-            </div>
-            <div class="offre">
-                <img src="../img/logo_temporaire.jpg" alt="image offre">
-                <h1>Nom de l'activité</h1>
-                <p>date</p>
-                <p>horaire</p>
-                <p>prix</p>
-                <p><a href="./infos_achat_offre.php"> >> Plus d'info </a></p>
-            </div>
-            <div class="offre">
-                <img src="../img/logo_temporaire.jpg" alt="image offre">
-                <h1>Nom de l'activité</h1>
-                <p>date</p>
-                <p>horaire</p>
-                <p>prix</p>
-                <p><a href="./infos_achat_offre.php"> >> Plus d'info </a></p>
-            </div>
+            <?php
+            include ('../Scripts/get_all_destinations.php');
+            foreach (get_all_destination() as $tab){
+                $html = "<div class=\"offre\">";
+                $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+                $html .= "<h1>Ville : ".$tab["ville"]."</h1>";
+                $html .= "<p> Départ : ".$tab["debut"]."</p>";
+                $html .= "<p> Durée en jours : ".$tab["duree"]."</p>";
+                $html .= "<p> Prix : ".$tab["prix"]." €</p>";
+                $html .= "<form action=\"/Tourisme Matane/projet-web-2020-tourisme-matane/Templates/infos_achat_offre.php\" method=\"get\">";
+                $html .= "<input type=\"hidden\" name=\"id\" value=\"".$tab["id_offre"]."\"> ";
+                $html .= "<input id=\"button\" type=\"submit\" value=\">> Plus d'info\">";
+                $html .= "</form> ";
+                $html .= "</div>";
+                echo $html;
+            }
+            ?>
+
         </div>
         <hr/>
         <footer>
