@@ -24,20 +24,20 @@
 <div class="row">
   <div class="side">
     <?php
-        echo "<img src=\"".$res[2]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+        echo "<img src=\"".$res[$_GET["id"]]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
     ?>
   </div>
 
   <div class="main">
-    <h1 id="nom_offre">Visite de la ville de <?php echo $res[2]["ville"]?> </h1>
+    <h1 id="nom_offre">Visite de la ville de <?php echo $res[$_GET["id"]]["ville"]?> </h1>
     <?php
-        echo "<p class=\"text-destination\">".$res[2]["description"]."</p>";
+        echo "<p class=\"text-destination\">".$res[$_GET["id"]]["description"]."</p>";
     ?>
   </div>
 
   <div class="main">
     <p>
-      Du <input type="date" name="debut" <?php $date = new DateTime($res[2]["debut"]); echo "value=\"".$date->format("Y-m-d")."\""?> > au <input type="date" name="fin" <?php $date->add(new DateInterval("P".$res[2]["duree"]."D")); echo "value=\"".$date->format("Y-m-d")."\""?> > (jours selectionnés inclus)
+      Du <input type="date" name="debut" <?php $date = new DateTime($res[$_GET["id"]]["debut"]); echo "value=\"".$date->format("Y-m-d")."\""?> > au <input type="date" name="fin" <?php $date->add(new DateInterval("P".$res[$_GET["id"]]["duree"]."D")); echo "value=\"".$date->format("Y-m-d")."\""?> > (jours selectionnés inclus)
     </p>
   </div>
   <div class="main">
