@@ -4,16 +4,12 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../CSS/theme.css">
         <link rel="stylesheet" type="text/css" href="../CSS/accueil.css">
+        <link rel="stylesheet" href="../CSS/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
     </head>
     <body>
-        <header>
-            <center>
-                <iframe src="header.html" align="top" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-            </center>
-        </header>
-        <hr/>
+        <?php include("header.html"); ?>
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
         <button id="discover-button">Découvrir notre compagnie</button>
@@ -54,8 +50,6 @@
         ?>
         <hr/>
 
-        <footer>
-            <iframe src="footer.html" align="bottom" frameborder="0" marginheight="0" marginwidth="0" style="margin: -0.5vw -0vw -0.5vw -0.5vw;width: 100vw;height: 8vw;"></iframe>
-        </footer>
+        <?php include("footer.html"); ?>
     </body>
 </html>
