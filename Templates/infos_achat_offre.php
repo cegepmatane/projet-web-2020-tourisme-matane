@@ -29,7 +29,7 @@
   </div>
 
   <div class="main">
-    <h1 id="nom_offre">Visite de la ville de Matane</h1>
+    <h1 id="nom_offre">Visite de la ville de <?php echo $res[2]["ville"]?> </h1>
     <?php
         echo "<p class=\"text-destination\">".$res[2]["description"]."</p>";
     ?>
@@ -43,9 +43,9 @@
   <div class="main">
     <h2>Nombre de personnes</h2>
     <ul class="personnes">
-      <li><input type="number" name="adultes" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans)</li>
-      <li><input type="number" name="enfants" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans)</li>
-      <li><input type="number" name="animaux" <?php echo "value=\"".$nombre_animaux."\""?> > animaux</li>
+      <li><input type="number" name="adultes" min="0" max="10" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans)</li>
+      <li><input type="number" name="enfants" min="0" max="10" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans)</li>
+      <li><input type="number" name="animaux" min="0" max="10" <?php echo "value=\"".$nombre_animaux."\""?> > animaux</li>
     </ul>
   </div>
 
