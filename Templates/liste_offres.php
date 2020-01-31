@@ -4,16 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Tourisme Matane</title>
+        <link rel="stylesheet" href="../CSS/index.css">
         <link rel="stylesheet" href="../CSS/theme.css">
         <link rel="stylesheet" href="../CSS/liste_offres.css">
         <base target="_parent">
     </head>
     <body>
-        <header>
-            <center>
-                <iframe src="header.html" align="top" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-            </center>
-        </header>
+        <?php include("header.html"); ?>
         <hr/>
         <div class="searchbar-filter">
             <form action="GET" class="formulaire">
@@ -54,7 +51,7 @@
                 $html .= "<p> Départ : ".$tab["debut"]."</p>";
                 $html .= "<p> Durée en jours : ".$tab["duree"]."</p>";
                 $html .= "<p> Prix : ".$tab["prix"]." €</p>";
-                $html .= "<form action=\"/Tourisme Matane/projet-web-2020-tourisme-matane/Templates/infos_achat_offre.php\" method=\"get\">";
+                $html .= "<form action=\"./infos_achat_offre.php\" method=\"get\">";
                 $html .= "<input type=\"hidden\" name=\"id\" value=\"".$tab["id_offre"]."\"> ";
                 $html .= "<input id=\"button\" type=\"submit\" value=\">> Plus d'info\">";
                 $html .= "</form> ";
@@ -65,9 +62,7 @@
 
         </div>
         <hr/>
-        <footer>
-            <iframe src="footer.html" align="bottom" frameborder="0" marginheight="0" marginwidth="0" style="margin: -0.5vw -0vw -0.5vw -0.5vw;width: 100vw;height: 8vw;"></iframe>
-        </footer>
+        <?php include("footer.html"); ?>
     </body>
 </html>
 

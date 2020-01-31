@@ -12,7 +12,7 @@
         <?php include("header.html"); ?>
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
-        <a href="mission.html">
+        <a href="mission.php">
             <button id="discover-button">Découvrir notre compagnie</button>
         </a>
         <center>

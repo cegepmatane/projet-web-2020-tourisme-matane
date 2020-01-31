@@ -15,11 +15,7 @@
 	<base target="_parent">
 </head>
 <body>
-	<header>
-
-    	<iframe src="header.html" align="top" frameborder="0" marginheight="0" marginwidth="0" style="margin: -0.5vw -0vw -0.5vw -0.5vw;width: 100vw;height: 8vw;"></iframe>
-
-  </header>
+    <?php include("header.html"); ?>
 <hr/> 
 <div class="row">
   <div class="side">
@@ -74,8 +70,6 @@
 
 </div>
 <hr/>
-	<footer>
-		<iframe src="footer.html" align="bottom" frameborder="0" marginheight="0" marginwidth="0" style="margin: -0.5vw -0vw -0.5vw -0.5vw;width: 100vw;height: 8vw;"></iframe>
-	</footer>
+    <?php include("footer.html"); ?>
 </body>
 </html>
