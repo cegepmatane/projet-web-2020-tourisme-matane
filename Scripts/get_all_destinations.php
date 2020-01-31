@@ -2,7 +2,7 @@
     function get_all_destination()
     {
         $server = "mysql";
-        $host = "localhost";
+        $host = "localhost:3308";
         $base = "bddtourisme";
         $user = "root";
         $pass = "";
@@ -17,7 +17,9 @@
                 'prix' => $tab['prix'],
                 'description' => $tab['description'],
                 'ville' => $tab['ville'],
-                'url_image' => $tab['url_image']
+                'url_image' => $tab['url_image'],
+                'debut' => $tab['debut'],
+                'duree' => $tab['duree']
             );
             $i++;
         }

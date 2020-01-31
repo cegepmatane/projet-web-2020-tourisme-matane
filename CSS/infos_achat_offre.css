@@ -54,8 +54,12 @@ a:hover{
   flex-wrap: wrap;
 }
 
-.img{
+.side img{
+	margin: auto 0 auto 0.2vw;
+	max-height:100%;
 	max-width: 100%;
+	width: auto;
+	height: auto;
 }
 
 * {

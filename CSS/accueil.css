@@ -147,8 +147,8 @@ a{
 }
 
 .div-destination:hover{
-    animation-duration: 0.1s;
-    animation-name: div-destination-zoom;
+    /*animation-duration: 0.1s;*/
+    /*animation-name: div-destination-zoom;*/
 
     font-size: 1.5vw;
 }
