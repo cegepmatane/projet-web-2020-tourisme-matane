@@ -8,11 +8,7 @@
         <title>Tourisme-Matane</title>
     </head>
     <body>
-        <header>
-            <center>
-                <iframe src="header.html" align="top" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-            </center>
-        </header>
+        <?php include("header.html"); ?>
         <hr/>
         <h1>Panneau d'administration</h1>
         <hr/>
