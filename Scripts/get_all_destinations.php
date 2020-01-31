@@ -1,13 +1,7 @@
 <?php
     function get_all_destination()
     {
-        $server = "mysql";
-        $host = "localhost:3308";
-        $base = "bddtourisme";
-        $user = "root";
-        $pass = "";
-
-        $db = new PDO("$server:host=$host;dbname=$base", $user, $pass);
+        include("connexion.php");
 
         $sql_command = "SELECT * from OFFRE WHERE sur_accueil=true";
         $i = 0;
@@ -26,3 +20,4 @@
         }
         return ($answer);
     }
+?>

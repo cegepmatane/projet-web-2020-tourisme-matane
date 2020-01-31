@@ -1,56 +1,44 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-	<title>Tourisme Matane</title>
-	<link rel="stylesheet" href="../CSS/index.css">
-	<base target="_parent">
-</head>
-<body style="overflow-y: hidden;">
-	<header>
-    	<a href="index.html">
-        	<img class="img_accueil" src="../img/logo_temporaire.jpg" alt="Logo Tourisme Matane" title="Tourisme Matane">
-		</a>
-		
-  		<nav role="navigation"> 
-      		<ul>
-      			<!-- Dans le css, organiser la liste à l'horizontale -->
-              	<li> 
-        			<a href="accueil.php" title="Accueil">Accueil</a> |
-             	</li>
-          		<li>
-        			<a href="liste_offres.php" title="Offres">Offres</a> |
-              	</li>
-          		<li>
-       				<a href="mission.html" title="A propos de nous" >A propos de nous</a>
-              	</li>
-	        </ul>
+<header style="overflow-y: hidden;">
+   	<a href="index.html">
+       	<img class="img_accueil" src="../img/logo_temporaire.jpg" alt="Logo Tourisme Matane" title="Tourisme Matane">
+	</a>
+	
+	<nav role="navigation"> 
+   		<ul>
+   			<!-- Dans le css, organiser la liste à l'horizontale -->
+           	<li> 
+      			<a href="accueil.php" title="Accueil">Accueil</a> |
+           	</li>
+       		<li>
+      			<a href="liste_offres.php" title="Offres">Offres</a> |
+           	</li>
+       		<li>
+  				<a href="mission.php" title="A propos de nous" >A propos de nous</a>
+           	</li>
+        </ul>
+	</nav>
+	  
+  	<!-- Mettre en forme le form avec le CSS -->
+  	<form class="nav_recherche">
+  		<input type="text" name="recherche">
+  		<input type="submit" name="rechercher" value="Recherche">
+  	</form>
 
-  		</nav>
-  		<!-- Mettre en forme le form avec le CSS -->
-  		<form class="nav_recherche">
-  			<input type="text" name="recherche">
-  			<input type="submit" name="rechercher" value="Recherche">
-  		</form>
-
-  		<nav class="nav_right" role="navigation"> 
-      		<ul>
-      			<!-- Dans le css, organiser la liste à l'horizontale -->
-              	<li> 
-        			<a href="" title="FR">FR</a> |
-             	</li>
-          		<li>
-        			<a href="" title="EN">EN</a>
-              	</li>
-	        </ul>
-
-  		</nav>
+	<nav class="nav_right" role="navigation"> 
+    	<ul>
+    		<!-- Dans le css, organiser la liste à l'horizontale -->
+           	<li> 
+      			<a href="" title="FR">FR</a> |
+           	</li>
+       		<li>
+      			<a href="" title="EN">EN</a>
+           	</li>
+	    </ul>
+	</nav>
 
 		
-  		<a href="connexion.html">
-        	<img src="../img/profil.jpg" alt="Icone Profil" title="Profil">
-		</a>
+  	<a href="connexion.html">
+       	<img src="../img/profil.jpg" alt="Icone Profil" title="Profil">
+	</a>
 
-  	</header>
-</body>
-</html>
+</header>

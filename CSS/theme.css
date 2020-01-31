@@ -1,11 +1,7 @@
-body{
+header{
     background-color: #101C31;
     overflow-y: fragments;
     overflow-x: hidden;
-}
-header iframe{
-    width: 90vw;
-    height: 8vw
 }
 
 a{
