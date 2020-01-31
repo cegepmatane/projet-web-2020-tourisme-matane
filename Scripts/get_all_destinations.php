@@ -19,7 +19,8 @@
                 'ville' => $tab['ville'],
                 'url_image' => $tab['url_image'],
                 'debut' => $tab['debut'],
-                'duree' => $tab['duree']
+                'duree' => $tab['duree'],
+                'id_offre' => $tab['id_offre']
             );
             $i++;
         }
