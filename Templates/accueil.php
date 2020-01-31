@@ -16,7 +16,9 @@
         <hr/>
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
-        <button id="discover-button">Découvrir notre compagnie</button>
+        <a href="mission.html">
+            <button id="discover-button">Découvrir notre compagnie</button>
+        </a>
         <center>
             <iframe id="video-accueil" src="https://www.youtube.com/embed/kppe8lJQ31Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </center>
@@ -42,7 +44,7 @@
         <?php
             include ('../Scripts/get_all_destinations.php');
             foreach (get_all_destination() as $tab){
-                $html = "<a href=\"#\">";
+                if($tab["sur_accueil"])$html = "<a href=\"#\">";
                 $html .= "<div class=\"div-destination\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
                 $html .= "<div>";

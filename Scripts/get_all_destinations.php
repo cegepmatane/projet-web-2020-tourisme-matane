@@ -2,14 +2,14 @@
     function get_all_destination()
     {
         $server = "mysql";
-        $host = "localhost:3308";
+        $host = "localhost";
         $base = "bddtourisme";
         $user = "root";
         $pass = "";
 
         $db = new PDO("$server:host=$host;dbname=$base", $user, $pass);
 
-        $sql_command = "SELECT * from OFFRE WHERE sur_accueil=true";
+        $sql_command = "SELECT * from OFFRE";
         $i = 0;
         $answer = array();
         foreach ($db->query($sql_command) as $tab) {
@@ -19,7 +19,8 @@
                 'ville' => $tab['ville'],
                 'url_image' => $tab['url_image'],
                 'debut' => $tab['debut'],
-                'duree' => $tab['duree']
+                'duree' => $tab['duree'],
+                'sur_accueil' => $tab['sur_accueil']
             );
             $i++;
         }
