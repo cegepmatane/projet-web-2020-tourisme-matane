@@ -13,7 +13,9 @@
         <hr/>
         <h1>Panneau d'administration</h1>
         <hr/>
-        <button class="bouton-add-destination">Ajouter une destination</button>
+        <button onclick="function f() {
+          header('Location : myfile.php');
+        }" class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>
         <?php
         include ('../Scripts/recuperer-destinations.php');
