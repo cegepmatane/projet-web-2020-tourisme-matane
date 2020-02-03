@@ -12,7 +12,7 @@
     <body>
         <?php include("header.html"); ?>
         <hr/>
-        <form method="post" action="../Scripts/ajout_destination.php">
+        <form method="post" action="../Scripts/ajout-destination.php">
         <p>Ville</p>
         <input type="text" name="ville">
         <p>Description</p>

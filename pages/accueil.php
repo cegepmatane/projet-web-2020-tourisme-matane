@@ -14,7 +14,7 @@
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
         <a href="mission.php">
-            <button id="discover-button">Découvrir notre compagnie</button>
+            <button id="bouton-decouvrir">Découvrir notre compagnie</button>
         </a>
         <center>
             <iframe id="video-accueil" src="https://www.youtube.com/embed/kppe8lJQ31Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -22,17 +22,17 @@
         <hr/>
 
         <h1>Rechercher une destination</h1>
-        <form id="form-search-destination" onsubmit="">
+        <form id="formulaire-recherche-destination" onsubmit="">
             <div>
-                <input id="search-destination-depart" class="search-input" type="search">
-                <img id="plane-icone" src="../decoration/plane.png">
-                <input id="search-destination-arrivee" class="search-input" type="search">
+                <input id="recherche-destination-depart" class="recherche-input" type="search">
+                <img id="avion-icone" src="../decoration/plane.png">
+                <input id="recherche-destination-arrivee" class="recherche-input" type="search">
             </div>
             <div>
-                <input id="search-destination-date-picker" class="search-input" type="date">
+                <input id="recherche-destination-date-picker" class="recherche-input" type="date">
             </div>
-            <div id="div-with-submit-button">
-                <button id="button-submit-search-destination" type="submit">Rechercher</button>
+            <div id="div-with-submit-recherche">
+                <button id="recherche-submit-recherche-destination" type="submit">Rechercher</button>
             </div>
         </form>
         <hr/>
@@ -45,8 +45,8 @@
                 $html .= "<div class=\"div-destination\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
                 $html .= "<div>";
-                $html .= "<p class=\"text-destination\">".$tab["description"]."</p>";
-                $html .= "<p class=\"text-destination\">Prix : ".$tab["prix"]." €</p>";
+                $html .= "<p>".$tab["description"]."</p>";
+                $html .= "<p>Prix : ".$tab["prix"]." €</p>";
                 $html .= "</div></div></a>";
                 echo $html;
             }

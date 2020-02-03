@@ -8,7 +8,7 @@ body{
     margin-right: auto;
     margin-left: auto;
 }
-#discover-button{
+#bouton-decouvrir{
     position: absolute;
     right: 10vw;
     width: 10vw;
@@ -23,14 +23,14 @@ body{
     background-color: #274873;
     color: #D9A566;
 }
-#discover-button:hover{
+#bouton-decouvrir:hover{
     animation-duration: 0.5s;
-    animation-name: button-discover;
+    animation-name: decouvrir-bouton;
     right: 9.5vw;
     width: 11vw;
     font:bold 1vw Arial;
 }
-@keyframes button-discover {
+@keyframes decouvrir-bouton {
     from {
         right: 10vw;
         width: 10vw;
@@ -43,41 +43,41 @@ body{
         font:bold 1vw Arial;
     }
 }
-#plane-icone{
+#avion-icone{
     width: 3vw;
     height: 3vw;
     margin: auto;
 }
 
-.search-input{
+.recherche-input{
     height: 2vw;
     width: auto;
     background-color: aliceblue;
 }
 
-#form-search-destination{
+#formulaire-recherche-destination{
     height: 10vw;
     text-align: center;
     width: 100%;
 }
 
-#search-destination-depart{
+#recherche-destination-depart{
     float: left;
     margin-left: 5vw;
 }
 
-#search-destination-arrivee{
+#recherche-destination-arrivee{
     float: right;
     margin-right: 5vw;
 }
 
-#search-destination-date-picker{
+#recherche-destination-date-choix{
     float: left;
     margin-left: 5vw;
     margin-top: 1vw;
 }
 
-#button-submit-search-destination{
+#bouton-submit-recherche-destination{
     width:6vw;
     height:6vw;
     background:#fafafa;
@@ -88,9 +88,9 @@ body{
     color: #D9A566;
 }
 
-#button-submit-search-destination:hover {
+#bouton-submit-recherche-destination:hover {
     animation-duration: 0.5s;
-    animation-name: button-search;
+    animation-name: bouton-recherche;
 
     background:#aaa;
     border-radius:50%;
@@ -99,12 +99,12 @@ body{
     border-color: #fafafa;
 }
 
-#div-with-submit-button{
+#div-avec-submit-bouton{
     position: absolute;
     margin-left: 45.5vw;
 }
 
-@keyframes button-search {
+@keyframes bouton-recherche {
     from {
         background-color:#0dc6db;
         border-radius:50%;
