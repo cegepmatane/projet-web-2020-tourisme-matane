@@ -16,4 +16,5 @@
         echo $sql_command;
         $db->query($sql_command);
     }
+    header("Location : ../pages/panneau-admin.php");
 ?>
