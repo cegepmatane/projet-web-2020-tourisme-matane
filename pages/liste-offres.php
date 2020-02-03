@@ -12,9 +12,9 @@
     <body>
         <?php include("header.html"); ?>
         <hr/>
-        <div class="searchbar-filter">
+        <div>
             <form action="GET" class="formulaire">
-                <input class="champ" type="text" value="Destination"/>
+                <input type="text" value="Destination"/>
                 <select name="filtre">
                     <option value="nouveaute">Nouveauté</option>
                     <option value="prix_moins_to_plus">Du - cher au + cher</option>
@@ -26,9 +26,9 @@
                 </select>
             </form>
         </div>
-        <div class="recherche-avancee">
+        <div>
             <form action="">
-                <input class="date" type="date">
+                <input type="date">
                 Prix : <input class="prix" type="range" name="points" min="0" max="10">
                 <select name="genre">
                     <option value="musique">Musique</option>
@@ -36,10 +36,10 @@
                     <option value="culture">Culture</option>
                     <option value="exploration">Exploration</option>
                 </select>
-                <input class="bouton" type="button" value="Rechercher" />
+                <input type="button" value="Rechercher" />
             </form>
         </div>
-        <div class="lig">
+        <div id="lig">
             <input type="hidden" name="id" value="">
             <!-- Boucle pour chaque activité -->
             <?php

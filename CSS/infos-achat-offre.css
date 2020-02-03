@@ -10,7 +10,7 @@ a:hover{
 	color: #B36A8F;
 }
 
-.cote{
+#cote{
   flex: 30%;
   background-color: #101C31;
 }
@@ -26,12 +26,12 @@ a:hover{
 	padding: 20px;
 }
 
-.div-principale .personnes{
+.div-principale #personnes{
 	list-style-type:none;
 	color:#F2D57E;
 }
 
-.div-principale .personnes li{
+.div-principale #personnes li{
 	margin-bottom: 10px;
 }
 
@@ -49,12 +49,12 @@ a:hover{
 	display: inline-block;
 }
 
-.ligne{
+#ligne{
   display: flex;
   flex-wrap: wrap;
 }
 
-.cote img{
+#cote img{
 	margin: auto 0 auto 0.2vw;
 	max-height:100%;
 	max-width: 100%;

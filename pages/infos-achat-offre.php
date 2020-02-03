@@ -17,8 +17,8 @@
 <body>
     <?php include("header.html"); ?>
 <hr/> 
-<div class="ligne">
-  <div class="cote">
+<div id="ligne">
+  <div id="cote">
     <?php
         echo "<img src=\"".$res[$_GET["id"] - 1]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
     ?>
@@ -38,7 +38,7 @@
   </div>
   <div class="div-principale">
     <h2>Nombre de personnes</h2>
-    <ul class="personnes">
+    <ul id="personnes">
       <li><input type="number" name="adultes" min="0" max="10" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans)</li>
       <li><input type="number" name="enfants" min="0" max="10" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans)</li>
       <li><input type="number" name="animaux" min="0" max="10" <?php echo "value=\"".$nombre_animaux."\""?> > animaux</li>
