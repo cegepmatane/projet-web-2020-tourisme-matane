@@ -1,7 +1,7 @@
 <?php
 
     $server = "mysql";
-    $host = "localhost:3308";
+    $host = "localhost";
     $base = "bddtourisme";
     $user = "root";
     $pass = "";
