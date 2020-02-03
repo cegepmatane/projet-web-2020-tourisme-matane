@@ -1,7 +1,7 @@
 <?php
 include("connexion.php");
 
-function add_destination($debut, $duree, $prix, $img, $description, $ville)
+function ajouterDestination($debut, $duree, $prix, $img, $description, $ville)
 {
     global $db;
 

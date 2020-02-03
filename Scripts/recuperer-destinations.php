@@ -1,6 +1,6 @@
 <?php
 include ('connexion.php');
-    function get_all_destination()
+    function recupererDestinations()
     {
         global $db;
 
