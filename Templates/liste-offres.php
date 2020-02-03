@@ -6,7 +6,7 @@
         <title>Tourisme Matane</title>
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/theme.css">
-        <link rel="stylesheet" href="../css/liste_offres.css">
+        <link rel="stylesheet" href="../css/liste-offres.css">
         <base target="_parent">
     </head>
     <body>
@@ -43,7 +43,7 @@
             <input type="hidden" name="id" value="">
             <!-- Boucle pour chaque activité -->
             <?php
-            include ('../Scripts/get_all_destinations.php');
+            include ('../Scripts/get-all-destinations.php');
             foreach (get_all_destination() as $tab){
                 $html = "<div class=\"offre\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
@@ -51,7 +51,7 @@
                 $html .= "<p> Départ : ".$tab["debut"]."</p>";
                 $html .= "<p> Durée en jours : ".$tab["duree"]."</p>";
                 $html .= "<p> Prix : ".$tab["prix"]." €</p>";
-                $html .= "<form action=\"./infos_achat_offre.php\" method=\"get\">";
+                $html .= "<form action=\"./infos-achat-offre.php\" method=\"get\">";
                 $html .= "<input type=\"hidden\" name=\"id\" value=\"".$tab["id_offre"]."\"> ";
                 $html .= "<input id=\"button\" type=\"submit\" value=\">> Plus d'info\">";
                 $html .= "</form> ";

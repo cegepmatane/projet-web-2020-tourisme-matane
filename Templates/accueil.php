@@ -39,7 +39,7 @@
 
         <h1>Nos destinations les plus visitées</h1>
         <?php
-            include ('../Scripts/get_all_destinations.php');
+            include ('../Scripts/get-all-destinations.php');
             foreach (get_all_destination() as $tab){
                 if($tab["sur_accueil"])$html = "<a href=\"#\">";
                 $html .= "<div class=\"div-destination\">";

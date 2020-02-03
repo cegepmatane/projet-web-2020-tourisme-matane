@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/theme.css">
-        <link rel="stylesheet" type="text/css" href="../css/panneau_admin.css">
+        <link rel="stylesheet" type="text/css" href="../css/panneau-admin.css">
         <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
@@ -16,7 +16,7 @@
         <button class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>
         <?php
-        include ('../Scripts/get_all_destinations.php');
+        include ('../Scripts/get-all-destinations.php');
         foreach (get_all_destination() as $tab) {
             echo "
                 <div class=\"div-destination-admin\">
