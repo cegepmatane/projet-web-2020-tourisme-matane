@@ -2,9 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../CSS/theme.css">
-        <link rel="stylesheet" type="text/css" href="../CSS/panneau_admin.css">
-        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" type="text/css" href="../css/panneau-admin.css">
+        <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
     </head>
@@ -16,8 +16,8 @@
         <button class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>
         <?php
-        include ('../Scripts/get_all_destinations.php');
-        foreach (get_all_destination() as $tab) {
+        include ('../Scripts/recuperer-destinations.php');
+        foreach (recupererDestinations() as $tab) {
             echo "
                 <div class=\"div-destination-admin\">
                     <div class=\"destination-admin-item\">

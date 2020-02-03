@@ -1,6 +1,6 @@
 <?php
-    include ('../Scripts/get_all_destinations.php');
-    $res = get_all_destination();
+    include('../Scripts/recuperer-destinations.php');
+    $res = recupererDestinations();
     $nombre_adultes = 0;
     $nombre_enfants = 0;
     $nombre_animaux = 0;
@@ -10,8 +10,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Tourisme Matane</title>
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/infos_achat_offre.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/infos-achat-offre.css">
 	<base target="_parent">
 </head>
 <body>

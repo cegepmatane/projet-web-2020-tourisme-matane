@@ -2,9 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../CSS/theme.css">
-        <link rel="stylesheet" type="text/css" href="../CSS/accueil.css">
-        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+        <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
     </head>
@@ -25,7 +25,7 @@
         <form id="form-search-destination" onsubmit="">
             <div>
                 <input id="search-destination-depart" class="search-input" type="search">
-                <img id="plane-icone" src="../img/plane.png">
+                <img id="plane-icone" src="../decoration/plane.png">
                 <input id="search-destination-arrivee" class="search-input" type="search">
             </div>
             <div>
@@ -39,8 +39,8 @@
 
         <h1>Nos destinations les plus visitées</h1>
         <?php
-            include ('../Scripts/get_all_destinations.php');
-            foreach (get_all_destination() as $tab){
+            include('../Scripts/recuperer-destinations.php');
+            foreach (recupererDestinations() as $tab){
                 if($tab["sur_accueil"])$html = "<a href=\"#\">";
                 $html .= "<div class=\"div-destination\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
