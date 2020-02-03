@@ -2,9 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../CSS/theme.css">
-        <link rel="stylesheet" type="text/css" href="../CSS/accueil.css">
-        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+        <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
     </head>
@@ -25,7 +25,7 @@
         <form id="form-search-destination" onsubmit="">
             <div>
                 <input id="search-destination-depart" class="search-input" type="search">
-                <img id="plane-icone" src="../img/plane.png">
+                <img id="plane-icone" src="../decoration/plane.png">
                 <input id="search-destination-arrivee" class="search-input" type="search">
             </div>
             <div>

@@ -10,8 +10,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Tourisme Matane</title>
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/infos_achat_offre.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/infos_achat_offre.css">
 	<base target="_parent">
 </head>
 <body>

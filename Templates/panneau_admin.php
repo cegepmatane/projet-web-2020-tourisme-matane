@@ -2,9 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../CSS/theme.css">
-        <link rel="stylesheet" type="text/css" href="../CSS/panneau_admin.css">
-        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" type="text/css" href="../css/panneau_admin.css">
+        <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
     </head>
