@@ -13,15 +13,13 @@
         <hr/>
         <h1>Panneau d'administration</h1>
         <hr/>
-        <button onclick="function f() {
-          header('Location : myfile.php');
-        }" id="bouton-add-destination">Ajouter une destination</button>
+        <button onclick="document.location.href= 'formulaire-ajout-destination.php'" class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>
         <?php
         include ('../Scripts/recuperer-destinations.php');
         foreach (recupererDestinations() as $tab) {
             echo "
-                <div id=\"div-destination-admin\">
+                <div class=\"div-destination-admin\">
                     <div class=\"destination-admin-item\">
                         <img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>
                         <button id=\"change_image\">Change</button>
