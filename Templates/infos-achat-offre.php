@@ -1,6 +1,6 @@
 <?php
-    include ('../Scripts/get-all-destinations.php');
-    $res = get_all_destination();
+    include('../Scripts/recuperer-destinations.php');
+    $res = recupererDestinations();
     $nombre_adultes = 0;
     $nombre_enfants = 0;
     $nombre_animaux = 0;

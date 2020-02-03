@@ -16,8 +16,8 @@
         <button class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>
         <?php
-        include ('../Scripts/get-all-destinations.php');
-        foreach (get_all_destination() as $tab) {
+        include ('../Scripts/recuperer-destinations.php');
+        foreach (recupererDestinations() as $tab) {
             echo "
                 <div class=\"div-destination-admin\">
                     <div class=\"destination-admin-item\">

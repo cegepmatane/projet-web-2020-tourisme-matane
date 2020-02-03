@@ -43,8 +43,8 @@
             <input type="hidden" name="id" value="">
             <!-- Boucle pour chaque activité -->
             <?php
-            include ('../Scripts/get-all-destinations.php');
-            foreach (get_all_destination() as $tab){
+            include('../Scripts/recuperer-destinations.php');
+            foreach (recupererDestinations() as $tab){
                 $html = "<div class=\"offre\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
                 $html .= "<h1>Ville : ".$tab["ville"]."</h1>";

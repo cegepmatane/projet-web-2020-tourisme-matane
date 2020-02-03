@@ -39,8 +39,8 @@
 
         <h1>Nos destinations les plus visitées</h1>
         <?php
-            include ('../Scripts/get-all-destinations.php');
-            foreach (get_all_destination() as $tab){
+            include('../Scripts/recuperer-destinations.php');
+            foreach (recupererDestinations() as $tab){
                 if($tab["sur_accueil"])$html = "<a href=\"#\">";
                 $html .= "<div class=\"div-destination\">";
                 $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
