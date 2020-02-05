@@ -1,8 +1,9 @@
 <?php
     include("connexion.php");
 
+    $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+
     $filtresOffre = array(
-        'id' => FILTER_VALIDATE_INT,
         'debut' => FILTER_SANITIZE_STRING,
         'duree' => FILTER_VALIDATE_INT,
         'prix' => FILTER_VALIDATE_FLOAT,
@@ -21,7 +22,7 @@
         WHERE id_offre = :id";
 
     $modificationOffre = $db->prepare($SQL_MODIFIER_OFFRE);
-    $modificationOffre->bindParam(':id', $offre['id'], PDO::PARAM_INT);
+    $modificationOffre->bindParam(':id', $id, PDO::PARAM_INT);
     $modificationOffre->bindParam(':debut', $offre['id'], PDO::PARAM_STR);
     $modificationOffre->bindParam(':duree', $offre['duree'], PDO::PARAM_FLOAT);
     $modificationOffre->bindParam(':prix', $offre['prix'], PDO::PARAM_INT);
