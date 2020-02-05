@@ -59,7 +59,7 @@
                     </div>
                     <div class=\"destination-admin-item\">
                         <a href='../scripts/suppression-offre.php?id=".$tab["id_offre"]."'>Supprimer</a>
-                        <a href='../scripts/modifier-offre.php?id=".$tab["id_offre"]."'>Modifier</a>
+                        <a href='../pages/formulaire-modifier-offre.php?id=".$tab["id_offre"]."'>Modifier</a>
                     </div>
                 </div>
                 ";
