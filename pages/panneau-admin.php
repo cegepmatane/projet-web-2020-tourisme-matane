@@ -19,31 +19,30 @@
         include ('../scripts/recuperer-destinations.php');
         foreach (recupererDestinations() as $tab) {
             $html = "
-                <div class=\"div-destination-admin\">
-                <a href='modifier-offre.php?id=".$tab["id_offre"]."'>Supprimer</a>
+                <div id=\"div-destination-admin\">
                     <div class=\"destination-admin-item\">
                         <img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>
-//                        <button id=\"change_image\">Change</button>
+                        <!--<button id=\"change_image\">Change</button>-->
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Ville : ".$tab["ville"]."</p>
-//                        <button id=\"change_ville\">Change</button>
+                        <!--<button id=\"change_ville\">Change</button>-->
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Prix : ".$tab["prix"]."€</p>
-//                        <button id=\"change_prix\">Change</button>
+                        <!--<button id=\"change_prix\">Change</button>-->
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Début : ".$tab["debut"]."</p>
-//                        <button id=\"change_date\">Change</button>
+                        <!--<button id=\"change_date\">Change</button>-->
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Durée : ".$tab["duree"]." jours</p>
-//                        <button id=\"change_duree\">Change</button>
+                        <!--<button id=\"change_duree\">Change</button>-->
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Description :".$tab["description"]."</p>
-//                        <button id=\"change_description\">Change</button>
+                        <!--<button id=\"change_description\">Change</button>-->
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Afficher sur l'accueil :</p>
@@ -57,6 +56,10 @@
                 $html .= ">
                             <span class=\"slider round\"></span>
                         </label>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <a href='../scripts/suppression-offre.php?id=".$tab["id_offre"]."'>Supprimer</a>
+                        <a href='../scripts/modifier-offre.php?id=".$tab["id_offre"]."'>Modifier</a>
                     </div>
                 </div>
                 ";
