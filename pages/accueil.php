@@ -41,14 +41,16 @@
         <?php
             include('../Scripts/recuperer-destinations.php');
             foreach (recupererDestinations() as $tab){
-                if($tab["sur_accueil"])$html = "<a href=\"#\">";
-                $html .= "<div class=\"div-destination\">";
-                $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
-                $html .= "<div>";
-                $html .= "<p>".$tab["description"]."</p>";
-                $html .= "<p>Prix : ".$tab["prix"]." €</p>";
-                $html .= "</div></div></a>";
-                echo $html;
+                if($tab["sur_accueil"]){
+                    $html = "<a href=\"#\">";
+                    $html .= "<div class=\"div-destination\">";
+                    $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+                    $html .= "<div>";
+                    $html .= "<p>".$tab["description"]."</p>";
+                    $html .= "<p>Prix : ".$tab["prix"]." €</p>";
+                    $html .= "</div></div></a>";
+                    echo $html;
+                }
             }
         ?>
         <hr/>

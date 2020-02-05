@@ -18,7 +18,7 @@
         <?php
         include ('../Scripts/recuperer-destinations.php');
         foreach (recupererDestinations() as $tab) {
-            echo "
+            $html = "
                 <div class=\"div-destination-admin\">
                     <div class=\"destination-admin-item\">
                         <img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>
@@ -49,16 +49,17 @@
                         <label class=\"switch\">
                             <input id=\"change_sur_accueil\" type=\"checkbox\"";
             if($tab["sur_accueil"]==1){
-                echo "checked=\"true\"";
+                $html.= "checked=true";
             }else{
-                echo "checked=\"false\"";
+                //$html.= "checked=false";
             }
-                echo ">
+                $html .= ">
                             <span class=\"slider round\"></span>
                         </label>
                     </div>
                 </div>
                 ";
+            echo $html;
         }
         ?>
     </body>
