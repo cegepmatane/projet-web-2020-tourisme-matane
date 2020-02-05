@@ -16,33 +16,34 @@
         <button onclick="document.location.href= 'formulaire-ajout-destination.php'" class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>
         <?php
-        include ('../Scripts/recuperer-destinations.php');
+        include ('../scripts/recuperer-destinations.php');
         foreach (recupererDestinations() as $tab) {
             $html = "
                 <div class=\"div-destination-admin\">
+                <a href='modifier-offre.php?id=".$tab["id_offre"]."'>Supprimer</a>
                     <div class=\"destination-admin-item\">
                         <img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>
-                        <button id=\"change_image\">Change</button>
+//                        <button id=\"change_image\">Change</button>
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Ville : ".$tab["ville"]."</p>
-                        <button id=\"change_ville\">Change</button>
+//                        <button id=\"change_ville\">Change</button>
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Prix : ".$tab["prix"]."€</p>
-                        <button id=\"change_prix\">Change</button>
+//                        <button id=\"change_prix\">Change</button>
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Début : ".$tab["debut"]."</p>
-                        <button id=\"change_date\">Change</button>
+//                        <button id=\"change_date\">Change</button>
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Durée : ".$tab["duree"]." jours</p>
-                        <button id=\"change_duree\">Change</button>
+//                        <button id=\"change_duree\">Change</button>
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Description :".$tab["description"]."</p>
-                        <button id=\"change_description\">Change</button>
+//                        <button id=\"change_description\">Change</button>
                     </div>
                     <div class=\"destination-admin-item\">
                         <p>Afficher sur l'accueil :</p>
