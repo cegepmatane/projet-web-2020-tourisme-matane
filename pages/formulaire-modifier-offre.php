@@ -12,19 +12,24 @@
     <body>
         <?php include("header.html"); ?>
         <hr/>
+        <?php
+            include_once('../scripts/recuperer-destinations.php');
+            $offre=recupererDestination($_GET["id"]);
+        ?>
         <form method="post" action="../Scripts/modifier-offre.php?id=<?php echo $_GET["id"]; ?>">
         <p>Ville</p>
-        <input type="text" name="ville">
+            <input type="text" name="ville" value="<?php echo $offre["ville"] ?>">
         <p>Description</p>
-        <input type="text" name="description">
+        <input type="text" name="description" value="<?php echo $offre["description"] ?>">
         <p>Image</p>
-        <input type="text" name="image">
+        <input type="text" name="image" value="<?php echo $offre["url_image"] ?>">
         <p>Debut</p>
-        <input type="date" name="debut">
+        <input type="date" name="debut" value="<?php echo $offre["debut"] ?>">
         <p>Durée</p>
-        <input type="text" name="duree">
+        <input type="text" name="duree" value="<?php echo $offre["duree"] ?>">
         <p>Prix</p>
-        <input type="text" name="prix"><br><br>
+        <input type="text" name="prix" value="<?php echo $offre["prix"] ?>">
+            <br><br>
         <input type="submit" name="submit" value="Valider">
         <?php include("footer.html"); ?>
     </form>

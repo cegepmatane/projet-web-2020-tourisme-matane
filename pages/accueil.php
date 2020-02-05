@@ -39,7 +39,7 @@
 
         <h1>Nos destinations les plus visitées</h1>
         <?php
-            include('../Scripts/recuperer-destinations.php');
+            include('../scripts/recuperer-destinations.php');
             foreach (recupererDestinations() as $tab){
                 if($tab["sur_accueil"]){
                     $html = "<a href=\"#\">";
