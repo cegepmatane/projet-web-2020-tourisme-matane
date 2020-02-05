@@ -17,35 +17,35 @@
 <body>
     <?php include("header.html"); ?>
 <hr/> 
-<div class="row">
-  <div class="side">
+<div id="ligne">
+  <div id="cote">
     <?php
         echo "<img src=\"".$res[$_GET["id"] - 1]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
     ?>
   </div>
 
-  <div class="main">
+  <div class="div-principale">
     <h1 id="nom_offre">Visite de la ville de <?php echo $res[$_GET["id"] - 1]["ville"]?> </h1>
     <?php
         echo "<p class=\"text-destination\">".$res[$_GET["id"] - 1]["description"]."</p>";
     ?>
   </div>
 
-  <div class="main">
+  <div class="div-principale">
     <p>
       Du <input type="date" name="debut" <?php $date = new DateTime($res[$_GET["id"] - 1]["debut"]); echo "value=\"".$date->format("Y-m-d")."\""?> > au <input type="date" name="fin" <?php $date->add(new DateInterval("P".$res[$_GET["id"] - 1]["duree"]."D")); echo "value=\"".$date->format("Y-m-d")."\""?> > (jours selectionnés inclus)
     </p>
   </div>
-  <div class="main">
+  <div class="div-principale">
     <h2>Nombre de personnes</h2>
-    <ul class="personnes">
+    <ul id="personnes">
       <li><input type="number" name="adultes" min="0" max="10" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans)</li>
       <li><input type="number" name="enfants" min="0" max="10" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans)</li>
       <li><input type="number" name="animaux" min="0" max="10" <?php echo "value=\"".$nombre_animaux."\""?> > animaux</li>
     </ul>
   </div>
 
-  <div class="main">
+  <div class="div-principale">
     <ul class="liste">
       Lieux inclus :
       <li>Une superbe école</li>

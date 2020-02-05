@@ -1,8 +1,8 @@
-.lig{
+#lig{
     display: flex;
     flex-wrap: wrap;
 }
-.lig .offre{
+#lig .offre{
     margin: auto;
     margin-top: 1%;
 }
@@ -31,7 +31,7 @@ img{
     }
 }
 
-.lig form #button{
+#lig form #button{
     width:6vw;
     height:6vw;
     background:#fafafa;
@@ -42,7 +42,7 @@ img{
     color: #D9A566;
 }
 
-.lig form #button:hover {
+#lig form #button:hover {
     animation-duration: 0.5s;
     animation-name: button-search;
 

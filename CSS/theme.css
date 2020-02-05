@@ -3,10 +3,6 @@ body{
     overflow-y: fragments;
     overflow-x: hidden;
 }
-header iframe{
-    width: 90vw;
-    height: 8vw
-}
 
 a{
     color: #D9A566;
