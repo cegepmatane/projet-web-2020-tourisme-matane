@@ -1,52 +1,27 @@
 <?php
     include("connexion.php");
 
-    function modifierOffreDebut($id, $date)
+    if (isset($_POST['submit']))
     {
-        global $db;
-        $sql = "UPDATE offre SET debut = $date WHERE id_offre = $id";
-        $db->query($sql);
-    }
+        
+        $ville = addslashes(trim($_POST['ville']));
+        $description = addslashes(trim($_POST['description']));
+        $image = addslashes(trim($_POST['image']));
+        $debut = addslashes(trim($_POST['debut']));
+        $duree = addslashes(trim($_POST['duree']));
+        $prix = addslashes(trim($_POST['prix']));
+        $id = addslashes(trim($_POST['id']));
 
-    function modifierOffreDuree($id, $duree)
-    {
-        global $db;
-        $sql = "UPDATE offre SET duree = $duree WHERE id_offre = $id";
-        $db->query($sql);
-    }
-
-    function modifierOffrePrix($id, $prix)
-    {
-        global $db;
-        $sql = "UPDATE offre SET prix = $prix WHERE id_offre = $id";
-        $db->query($sql);
-    }
-
-    function modifierOffreUrlImage($id, $url)
-    {
-        global $db;
-        $sql = "UPDATE offre SET url_image = $url WHERE id_offre = $id";
-        $db->query($sql);
-    }
-
-    function modifierOffreSurAccueil($id, $bool)
-    {
-        global $db;
-        $sql = "UPDATE offre SET sur_accueil = $bool WHERE id_offre = $id";
-        $db->query($sql);
-    }
-
-    function modifierOffreDescription($id, $description)
-    {
-        global $db;
-        $sql = "UPDATE offre SET description = $description WHERE id_offre = $id";
-        $db->query($sql);
-    }
-
-    function modifierOffreVille($id, $ville)
-    {
-        global $db;
-        $sql = "UPDATE offre SET ville = $ville WHERE id_offre = $id";
-        $db->query($sql);
+        $sql = "UPDATE offre SET debut = $date,
+            duree = $duree,
+            prix = $prix,
+            url_image = $image,
+            sur_accueil = $accueil,
+            description = $description,
+            ville = $ville
+            WHERE id_offre = $id";
+        
+        echo $sql;
+        $db->query($sql_command);
     }
 ?>
