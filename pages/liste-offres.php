@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+$id = 1;
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -52,11 +54,12 @@
                 $html .= "<p> Durée en jours : ".$tab["duree"]."</p>";
                 $html .= "<p> Prix : ".$tab["prix"]." €</p>";
                 $html .= "<form action=\"./infos-achat-offre.php\" method=\"get\">";
-                $html .= "<input type=\"hidden\" name=\"id\" value=\"".$tab["id_offre"]."\"> ";
+                $html .= "<input type=\"hidden\" name=\"id\" value=\"".$id."\"> ";
                 $html .= "<input id=\"button\" type=\"submit\" value=\">> Plus d'info\">";
                 $html .= "</form> ";
                 $html .= "</div>";
                 echo $html;
+                $id++;
             }
             ?>
 
