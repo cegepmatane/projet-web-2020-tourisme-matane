@@ -1,4 +1,4 @@
 <?php
- header('Location: Templates/accueil.php');
+ header('Location: pages/accueil.php');
  exit();
 ?>
