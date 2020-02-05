@@ -19,7 +19,7 @@
         include ('../Scripts/recuperer-destinations.php');
         foreach (recupererDestinations() as $tab) {
             $html = "
-                <div class=\"div-destination-admin\">
+                <div id=\"div-destination-admin\">
                     <div class=\"destination-admin-item\">
                         <img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>
                         <button id=\"change_image\">Change</button>
