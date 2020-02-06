@@ -12,6 +12,8 @@
     <body>
         <?php include("header.html"); ?>
         <hr/>
+		<h1>Panneau d'administration</h1>
+		<h2>Formulaire de modification d'offre</h2>
         <?php
             include_once('../scripts/recuperer-destinations.php');
             $offre=recupererDestination($_GET["id"]);

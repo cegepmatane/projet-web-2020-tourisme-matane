@@ -38,32 +38,13 @@
                     Du <input type="date" name="debut" <?php $date = new DateTime($res[$_GET["id"] - 1]["debut"]); echo "value=\"".$date->format("Y-m-d")."\""?> > au <input type="date" name="fin" <?php $date->add(new DateInterval("P".$res[$_GET["id"] - 1]["duree"]."D")); echo "value=\"".$date->format("Y-m-d")."\""?> > (jours selectionnés inclus)
                 </p>
             </div>
+            
             <div class="div-principale">
-                <h2>Nombre de personnes</h2>
-                <ul id="personnes">
-                    <li><input type="number" name="adultes" min="0" max="10" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans)</li>
-                    <li><input type="number" name="enfants" min="0" max="10" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans)</li>
-                    <li><input type="number" name="animaux" min="0" max="10" <?php echo "value=\"".$nombre_animaux."\""?> > animaux</li>
-                </ul>
-            </div>
-
-            <div class="div-principale">
-                <ul class="liste">
-                    Lieux inclus :
-                    <li>Une superbe école</li>
-                    <li>Un splendide quartier</li>
-                    <li>Un magnifique parc</li>
-                </ul>
-                <ul class="liste">
-                    Options incluses :
-                    <li>Un Wi-Fi surpuissant</li>
-                    <li>Un trajet rapide en bus</li>
-                    <li>L'entrée dans les lieux</li>
-                </ul>
+                
                 <div id="achat">
                     <p>
                         <?php
-                        echo ($nombre_adultes*60+$nombre_enfants*30+$nombre_animaux*10)." €";
+                        echo ($res[$_GET["id"] - 1]["prix"])." €";
                         ?>
                     </p>
                     <button>Acheter</button>
