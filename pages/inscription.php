@@ -1,0 +1,42 @@
+<?php ?>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tourisme Matane</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" href="../css/inscription.css">
+        <base target="_parent">
+    </head>
+    <body>
+        <?php include("header.html"); ?>
+        <hr/>
+        <h1>Inscription</h1>
+        <form class="formulaire-inscription" method="post" action="../scripts/">
+            <div class="style">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" id="prenom" required>
+            </div>
+            <div class="style">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" required>
+            </div>
+            <div class="style">
+                <label for="age">Date de naissance</label>
+                <input type="text" name="age" id="age" required>
+            </div>
+            <div class="style">
+                <label for="mail">Adresse mail</label>
+                <input type="email" name="mail" id="mail" required>
+            </div>
+            <div class="style">
+                <label for="mot-de-passe">Mot de passe</label>
+                <input type="password" name="mot-de-passe" id="mot-de-passe" required>
+            </div>
+            <input class="bouton" type="submit" name="submit" value="Valider">
+        </form>
+        <hr/>  
+        <?php include("footer.html"); ?>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+.formulaire-inscription .style{
+    padding: 20px;
+}
+
+.formulaire-inscription .style label{
+    color: #F2D57E;
+    text-align: justify;
+}
+
+.formulaire-inscription .style input{
+    width: 15%;
+}
+
+.formulaire-inscription button{
+    padding: 10vw;
+}
+
+.formulaire-inscription *{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.formulaire-inscription .buton{
+    align-self: center;
+}
