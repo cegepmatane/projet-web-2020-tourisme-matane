@@ -12,6 +12,7 @@
         <?php include("header.html"); ?>
         <hr/>
         <h1>Panneau d'administration</h1>
+		<h2>Liste des offres modifiables</h2>
         <hr/>
         <button onclick="document.location.href= 'formulaire-ajout-destination.php'" class="bouton-add-destination">Ajouter une destination</button>
         <h2>Offres</h2>

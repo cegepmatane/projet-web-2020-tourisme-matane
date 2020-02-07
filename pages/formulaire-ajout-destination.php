@@ -11,6 +11,8 @@
     </head>
     <body>
         <?php include("header.html"); ?>
+		<h1>Panneau d'administration</h1>
+		<h2>Formulaire d'ajout d'une offre</h2>
         <hr/>
         <form method="post" action="../Scripts/ajout-destination.php">
         <p>Ville</p>
