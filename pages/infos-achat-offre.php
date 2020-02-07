@@ -47,7 +47,9 @@
                         echo ($res[$_GET["id"] - 1]["prix"])." €";
                         ?>
                     </p>
-                    <button>Acheter</button>
+                    <form>
+                        <button type="submit" formaction="paiement.html">Acheter</button>
+                    </form>
                 </div>
             </div>
 
