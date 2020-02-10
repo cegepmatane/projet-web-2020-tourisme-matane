@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Tourisme Matane</title>
-        <link rel="stylesheet" href="../css/inscription.css">
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" href="../css/inscription.css">
         <base target="_parent">
     </head>
     <body>
@@ -24,7 +24,7 @@
             </div>
             <div class="style">
                 <label for="age">Date de naissance</label>
-                <input type="text" name="age" id="age" required>
+                <input type="date" name="age" id="age" required>
             </div>
             <div class="style">
                 <label for="mail">Adresse mail</label>
@@ -35,8 +35,10 @@
                 <input type="password" name="mot-de-passe" id="mot-de-passe" required>
             </div>
             <div class="validation">
-                <a class="compte" href="connexion.php">Vous possédez déjà un compte.</a>
                 <input class="bouton" type="submit" name="submit" value="Valider">
+            </div>
+            <div class="style">
+                <a class="compte" href="connexion.php">Vous possédez déjà un compte.</a>
             </div>
         </form>
         <hr/>  
