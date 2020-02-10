@@ -22,7 +22,7 @@ $id = $_GET["id"];
     <div class="div-principale">
         <div id="achat">
             <p>
-
+                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Buy now with PayPal" />
             </p>
             <button>Acheter</button>
         </div>

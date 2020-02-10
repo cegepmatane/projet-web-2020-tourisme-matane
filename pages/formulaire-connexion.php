@@ -23,7 +23,7 @@
             <div class="critere">
                 <label for="mot-de-passe">Mot de passe</label>
                 <input type="password" placeholder="mot de passe" id="mot-de-passe" required>
-                <a href="oubli-mot-de-passe.php">J'ai oublié mon mot de passe</a>
+<!--                <a href="oubli-mot-de-passe.php">J'ai oublié mon mot de passe</a>-->
             </div>
 
             <label><input type="checkbox" id="se-souvenir"> Se souvenir de moi</label>

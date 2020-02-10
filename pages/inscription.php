@@ -38,7 +38,7 @@
                 <input class="bouton" type="submit" name="submit" value="Valider">
             </div>
             <div class="style">
-                <a class="compte" href="connexion.php">Vous possédez déjà un compte.</a>
+                <a class="compte" href="formulaire-connexion.php">Vous possédez déjà un compte.</a>
             </div>
         </form>
         <hr/>  
