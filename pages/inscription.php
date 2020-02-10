@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Tourisme Matane</title>
+        <link rel="stylesheet" href="../css/inscription.css">
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/theme.css">
-        <link rel="stylesheet" href="../css/inscription.css">
         <base target="_parent">
     </head>
     <body>
@@ -34,7 +34,10 @@
                 <label for="mot-de-passe">Mot de passe</label>
                 <input type="password" name="mot-de-passe" id="mot-de-passe" required>
             </div>
-            <input class="bouton" type="submit" name="submit" value="Valider">
+            <div class="validation">
+                <a class="compte" href="connexion.php">Vous possédez déjà un compte.</a>
+                <input class="bouton" type="submit" name="submit" value="Valider">
+            </div>
         </form>
         <hr/>  
         <?php include("footer.html"); ?>

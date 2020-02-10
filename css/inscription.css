@@ -8,11 +8,7 @@
 }
 
 .formulaire-inscription .style input{
-    width: 15%;
-}
-
-.formulaire-inscription button{
-    padding: 10vw;
+    width: 15vw;
 }
 
 .formulaire-inscription *{
@@ -21,6 +17,6 @@
     align-self: center;
 }
 
-.formulaire-inscription .buton{
-    align-self: center;
+.formulaire-inscription .validation{
+    width: 5vw;
 }
