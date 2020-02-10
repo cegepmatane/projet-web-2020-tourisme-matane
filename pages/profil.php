@@ -25,7 +25,7 @@
             <ul class="liste-voyages">
                 <li class="voyage">
                     <ul class="details-voyage">
-                        <li class="destination">Montreal</li>
+                        <li class="destination">Montréal</li>
                         <li class="date">10/02/2019</li>
                         <li class="prix">349.99 €</li>
                     </ul>
@@ -47,7 +47,8 @@
             </ul>
         </div>
 
-        <a class="lien-deconnexion" href="deconnexion">Se déconnecter</a>
+        <a class="lien-deconnexion" href="deconnexion.php">Se déconnecter</a>
+        <br/>
 
         <!-- Footer -->
         <hr/>

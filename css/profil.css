@@ -1,5 +1,7 @@
 .lien-deconnexion {
     color: #F2D57E;
+    float: right;
+    margin-right: 2.5vw;
 }
 
 .titre-voyages {
@@ -11,7 +13,17 @@ ul {
 }
 
 .details-voyage {
-    padding: 5vh 0vh;
+    padding: 2.5vh 0vh;
     display: flex;
     flex-wrap: wrap;
+}
+
+.details-voyage li {
+    color: #F2D57E;
+    width: 100px;
+    margin-right: 20vw;
+}
+
+.titre-page, .nom, .informations, .factures {
+    margin-left: 2.5vw;
 }
