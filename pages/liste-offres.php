@@ -14,7 +14,8 @@ $id = 1;
     <body>
         <?php include("header.html"); ?>
         <hr/>
-        <div>
+        <!-- Filtre et recherche -->
+        <!-- <div> 
             <form action="GET" class="formulaire">
                 <input type="text" value="Destination"/>
                 <select name="filtre">
@@ -24,7 +25,6 @@ $id = 1;
                     <option value="genre">Genre</option>
                     <option value="alphabétique">Ordre alphabétique</option>
                     <option value="alphabétique_inverse">Ordre alphabétique inverse</option>
-
                 </select>
             </form>
         </div>
@@ -40,7 +40,9 @@ $id = 1;
                 </select>
                 <input type="button" value="Rechercher" />
             </form>
-        </div>
+        </div> -->
+        
+        <!-- listage des offres -->
         <div id="lig">
             <input type="hidden" name="id" value="">
             <!-- Boucle pour chaque activité -->
