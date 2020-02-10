@@ -1,9 +1,6 @@
 <?php
     include('../Scripts/recuperer-destinations.php');
     $res = recupererDestinations();
-    $nombre_adultes = 0;
-    $nombre_enfants = 0;
-    $nombre_animaux = 0;
     $id = $_GET["id"];
 ?>
 <!DOCTYPE html>
@@ -34,36 +31,12 @@
                 ?>
             </div>
 
-            <form action="./paiement.php" method="get">
-                <div class="div-principale">
-                    <p>
-                        Du <input type="date" name="debut" <?php $date = new DateTime($res[$id - 1]["debut"]); echo "value=\"".$date->format("Y-m-d")."\""?> > au <input type="date" name="fin" <?php $date->add(new DateInterval("P".$res[$id - 1]["duree"]."D")); echo "value=\"".$date->format("Y-m-d")."\""?> > (jours selectionnés inclus)
-                    </p>
-                </div>
+            <form action="./paiement1.php" method="get">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <input id="button" type="submit" value="Acheter">
+                </form>
 
-                <div class="div-principale">
-                    <h2>Nombre de personnes</h2>
-                    <ul id="personnes">
-                        <li><input type="number" name="adultes" min="0" max="10" <?php echo "value=\"".$nombre_adultes."\""?> > adultes(+18ans) ==> Prix par jour et par adulte : <?php echo $res[$id - 1]["prix_adulte"]?></li>
-                        <li><input type="number" name="enfants" min="0" max="10" <?php echo "value=\"".$nombre_enfants."\""?> > enfants(-18ans) ==> Prix par jour et par enfant : <?php echo $res[$id - 1]["prix_enfant"]?></li>
-                        <li><input type="number" name="animaux" min="0" max="10" <?php echo "value=\"".$nombre_animaux."\""?> > animaux ==> Prix par jour et par animal : <?php echo $res[$id - 1]["prix_animal"]?></li>
-                    </ul>
-                </div>
 
-                <div class="div-principale">
-
-                    <div id="achat">
-                        <p>
-                            <?php
-                            echo ($res[$id - 1]["prix"])." €";
-                            ?>
-                        </p>
-                            <input type="hidden" name="id" value="<?php echo $id; ?>">
-                             <input id="button" type="submit" value="Acheter">
-                    ?>
-                    </div>
-                </div>
-            </form>
 
         </div>
     <?php }else{
