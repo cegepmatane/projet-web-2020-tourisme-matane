@@ -1,0 +1,17 @@
+.lien-deconnexion {
+    color: #F2D57E;
+}
+
+.titre-voyages {
+    color: #D9A566;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.details-voyage {
+    padding: 5vh 0vh;
+    display: flex;
+    flex-wrap: wrap;
+}
