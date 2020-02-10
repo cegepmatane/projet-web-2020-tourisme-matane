@@ -52,7 +52,7 @@ $id = 1;
                 $html .= "<h1>Ville : ".$tab["ville"]."</h1>";
                 $html .= "<p> Départ : ".$tab["debut"]."</p>";
                 $html .= "<p> Durée en jours : ".$tab["duree"]."</p>";
-                $html .= "<p> Prix : ".$tab["prix"]." €</p>";
+                $html .= "<p> Prix initial : ".$tab["prix"]." €</p>";
                 $html .= "<form action=\"./infos-achat-offre.php\" method=\"get\">";
                 $html .= "<input type=\"hidden\" name=\"id\" value=\"".$id."\"> ";
                 $html .= "<input id=\"button\" type=\"submit\" value=\">> Plus d'info\">";

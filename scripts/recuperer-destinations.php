@@ -16,7 +16,10 @@ include ('connexion.php');
                 'debut' => $tab['debut'],
                 'duree' => $tab['duree'],
                 'sur_accueil' => $tab['sur_accueil'],
-                'id_offre' => $tab['id_offre']
+                'id_offre' => $tab['id_offre'],
+                'prix_adulte' => $tab['prix_adulte'],
+                'prix_enfant' => $tab["prix_enfant"],
+                'prix_animal' => $tab["prix_animal"]
             );
             $i++;
         }
@@ -35,7 +38,10 @@ include ('connexion.php');
                 'debut' => $tab['debut'],
                 'duree' => $tab['duree'],
                 'sur_accueil' => $tab['sur_accueil'],
-                'id_offre' => $tab['id_offre']
+                'id_offre' => $tab['id_offre'],
+                'prix_adulte' => $tab['prix_adulte'],
+                'prix_enfant' => $tab["prix_enfant"],
+                'prix_animal' => $tab["prix_animal"]
             );
         }
         return $answer;
