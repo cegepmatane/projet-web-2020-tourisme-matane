@@ -24,20 +24,7 @@
             </div>
             <div class="style">
                 <label for="date_naissance">Date de naissance</label>
-                <div class="col">
-                    <div>   
-                        <label for="jour">jour</label>
-                        <input type="text" name="jour" id="jour" required>
-                    </div>
-                    <div>
-                        <label for="mois">mois</label>
-                        <input type="text" name="mois" id="mois" required>
-                    </div>
-                    <div>
-                        <label for="annee">annee</label>
-                        <input type="text" name="annee" id="annee" required>
-                    </div>
-                </div>
+                <input type="date" name="date_naissance" id="date_naissance" required>
             </div>
             <div class="style">
                 <label for="mail">Adresse mail</label>
