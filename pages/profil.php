@@ -21,7 +21,7 @@
         </div>
 
         <div class="factures">
-            <h3 class="titre-voyages">Mes voyages</h3>
+            <h3 class="titre-voyages">Mes prochains voyages</h3>
             <ul class="liste-voyages">
                 <li class="voyage">
                     <ul class="details-voyage">
@@ -58,26 +58,26 @@
         include ('../scripts/recuperer-factures.php');
         foreach (recupererFacturesWithIdUser(1) as $tab) {
             $html = "
-                <div id=\"div-destination-admin\">
-                    <div class=\"destination-admin-item\">
+                <div id=\"div-facture-profil\">
+                    <div class=\"facture-profil-item\">
                         <p>Utilisateur : ".$tab["id_utilisateur"]."</p>
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class=\"facture-profil-item\">
                         <p>Destination : ".$tab["id_destination"]."</p>
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class=\"facture-profil-item\">
                         <p>Adultes : ".$tab["nb_adultes"]."</p>
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class=\"facture-profil-item\">
                         <p>Enfants : ".$tab["nb_enfants"]."</p>
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class=\"facture-profil-item\">
                         <p>Animaux :".$tab["nb_animaux"]."</p>
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class=\"facture-profil-item\">
                         <p>Durée : ".$tab["duree"]." jours</p>
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class=\"facture-profil-item\">
                         <p>Prix : ".$tab["prix_final"]."€</p>
                     </div>
                 </div>

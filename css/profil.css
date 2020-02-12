@@ -27,3 +27,45 @@ ul {
 .titre-page, .nom, .informations, .factures {
     margin-left: 2.5vw;
 }
+
+/*Liste des facture*/
+#div-facture-profil{
+    display: grid;
+    margin: 1vw;
+
+    text-align: center;
+
+    background-color: #274873;
+    font-size: 1vw;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #555555;
+    border-radius: 10px;
+}
+
+#div-facture-profil .facture-profil-item img{
+    margin: auto 0 auto 0.2vw;
+    max-height:5vw;
+    width: auto;
+    height: auto;
+}
+
+#div-facture-profil .facture-profil-item button{
+    padding:1px 0 1px 0;
+    font:bold 13px Arial;
+    background:#f5f5f5;
+    color:#555;
+    border-radius:2px;
+    width:100px;
+//height: 20px;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 3px #999;
+}
+
+.facture-profil-item{
+    display: grid;
+    grid-row: 1;
+    width: auto;
+    margin: 0.5vw auto;
+}
