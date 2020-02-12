@@ -1,5 +1,6 @@
 <?php
 $id = $_GET["id"];
+$prix = $_GET["prix"];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,9 +23,19 @@ $id = $_GET["id"];
     <div class="div-principale">
         <div id="achat">
             <p>
-                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Buy now with PayPal" />
+            <?php echo $prix; ?>
+            <form action="https://www.paypal.com/cgi-bbin/webscr" method=""post>
+                <input type="hidden" name="charset" value="utf-8">
+                <input type="hidden" name="cmd" value="_xclick"/>
+                <input type="hidden" name="item_name" value="<?php echo "Voyage numéro ".$id; ?>">
+                <input type="hidden" name="business" value="tourismeMataneWeb@gmail.com">
+                <input type="hidden" name="amount" value="<?php echo $prix ?>">
+                <input type="hidden" name="return" value="http://localhost/Tourisme%20Matane/Le%20site/projet-web-2020-tourisme-matane/pages/paiement-validation.php">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="submit" value="Acheter">
+            </form>
+
             </p>
-            <button>Acheter</button>
         </div>
     </div>
 
