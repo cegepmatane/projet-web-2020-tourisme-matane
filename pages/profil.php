@@ -21,7 +21,7 @@
         </div>
 
         <div class="factures">
-            <h3 class="titre-voyages">Mes voyages</h3>
+            <h3 class="titre-voyages">Mes prochains voyages</h3>
             <ul class="liste-voyages">
                 <li class="voyage">
                     <ul class="details-voyage">
@@ -47,9 +47,39 @@
             </ul>
         </div>
 
+        <!-- Mes factures -->
+        <hr/>
+        <h3 class="titre-voyages">Liste des factures</h3>
+        <?php
+        include ('../scripts/recuperer-factures.php');
+        foreach (recupererFacturesWithIdUser(1) as $tab) {
+            $html = "
+                <div id=\"div-facture-profil\">
+                    <div class=\"facture-profil-item\">
+                        <p>Destination : ".$tab["id_destination"]."</p>
+                    </div>
+                    <div class=\"facture-profil-item\">
+                        <p>Adultes : ".$tab["nb_adultes"]."</p>
+                    </div>
+                    <div class=\"facture-profil-item\">
+                        <p>Enfants : ".$tab["nb_enfants"]."</p>
+                    </div>
+                    <div class=\"facture-profil-item\">
+                        <p>Animaux :".$tab["nb_animaux"]."</p>
+                    </div>
+                    <div class=\"facture-profil-item\">
+                        <p>Durée : ".$tab["duree"]." jours</p>
+                    </div>
+                    <div class=\"facture-profil-item\">
+                        <p>Prix : ".$tab["prix_final"]."€</p>
+                    </div>
+                </div>
+                ";
+            echo $html;
+        }
+        ?>
         <a class="lien-deconnexion" href="deconnexion.php">Se déconnecter</a>
         <br/>
-
         <!-- Footer -->
         <hr/>
         <?php include("footer.html"); ?>
