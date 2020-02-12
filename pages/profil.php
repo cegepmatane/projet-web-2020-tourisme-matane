@@ -50,6 +50,43 @@
         <a class="lien-deconnexion" href="deconnexion.php">Se déconnecter</a>
         <br/>
 
+        <!-- Mes factures -->
+        <hr/>
+        <h2>Liste des factures</h2>
+        <hr/>
+        <?php
+        include ('../scripts/recuperer-factures.php');
+        foreach (recupererFacturesWithIdUser(1) as $tab) {
+            $html = "
+                <div id=\"div-destination-admin\">
+                    <div class=\"destination-admin-item\">
+                        <p>Utilisateur : ".$tab["id_utilisateur"]."</p>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <p>Destination : ".$tab["id_destination"]."</p>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <p>Adultes : ".$tab["nb_adultes"]."</p>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <p>Enfants : ".$tab["nb_enfants"]."</p>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <p>Animaux :".$tab["nb_animaux"]."</p>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <p>Durée : ".$tab["duree"]." jours</p>
+                    </div>
+                    <div class=\"destination-admin-item\">
+                        <p>Prix : ".$tab["prix_final"]."€</p>
+                    </div>
+                </div>
+                ";
+            echo $html;
+        }
+        ?>
+        <hr/>
+
         <!-- Footer -->
         <hr/>
         <?php include("footer.html"); ?>

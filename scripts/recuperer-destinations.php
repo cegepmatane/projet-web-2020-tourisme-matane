@@ -3,7 +3,7 @@ include ('connexion.php');
     function recupererDestinations()
     {
         $server = "mysql";
-        $host = "localhost:3308";
+        $host = "localhost";
         $base = "bddtourisme";
         $user = "root";
         $pass = "";
