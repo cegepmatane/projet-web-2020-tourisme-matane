@@ -24,7 +24,7 @@ $prix = $_GET["prix"];
         <div id="achat">
             <p>
             <?php echo $prix; ?>
-            <form action="https://www.paypal.com/cgi-bbin/webscr" method=""post>
+            <form action="https://www.paypal.com/cgi-bbin/webscr" method="post">
                 <input type="hidden" name="charset" value="utf-8">
                 <input type="hidden" name="cmd" value="_xclick"/>
                 <input type="hidden" name="item_name" value="<?php echo "Voyage numéro ".$id; ?>">
