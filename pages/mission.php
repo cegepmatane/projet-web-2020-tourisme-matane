@@ -36,7 +36,7 @@
                 <li class="membre">
                     <img class="photo" src="../decoration/profil.jpg" alt="Photo de Loris">
                     <h4 class="nom">Loris Ponroy</h4>
-                    <p class="mail">loris.ponroy@gmail.com</p>
+                    <p class="mail">loris.ponroy@lilo.org</p>
                 </li>
                 <li class="membre">
                     <img class="photo" src="../decoration/profil.jpg" alt="Photo de Florian">

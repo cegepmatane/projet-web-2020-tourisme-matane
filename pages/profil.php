@@ -47,21 +47,14 @@
             </ul>
         </div>
 
-        <a class="lien-deconnexion" href="deconnexion.php">Se déconnecter</a>
-        <br/>
-
         <!-- Mes factures -->
         <hr/>
-        <h2>Liste des factures</h2>
-        <hr/>
+        <h3 class="titre-voyages">Liste des factures</h3>
         <?php
         include ('../scripts/recuperer-factures.php');
         foreach (recupererFacturesWithIdUser(1) as $tab) {
             $html = "
                 <div id=\"div-facture-profil\">
-                    <div class=\"facture-profil-item\">
-                        <p>Utilisateur : ".$tab["id_utilisateur"]."</p>
-                    </div>
                     <div class=\"facture-profil-item\">
                         <p>Destination : ".$tab["id_destination"]."</p>
                     </div>
@@ -85,8 +78,8 @@
             echo $html;
         }
         ?>
-        <hr/>
-
+        <a class="lien-deconnexion" href="deconnexion.php">Se déconnecter</a>
+        <br/>
         <!-- Footer -->
         <hr/>
         <?php include("footer.html"); ?>
