@@ -20,9 +20,9 @@ $date = new DateTime($res[$id - 1]["debut"]);
 </head>
 <body>
     <?php include("header.html"); ?>
-
-    <h1>Tourisme-Matane</h1>
-    <h2>Choisissez les dates de votre séjour</h2>
+<hr>
+    <h1>Tourisme-Matane</h1><br><hr>
+    <h2>Choisissez les dates de votre séjour</h2><br><hr>
 
     <form action="./paiement3.php" method="get">
         <div class="div-principale">
@@ -53,7 +53,7 @@ $date = new DateTime($res[$id - 1]["debut"]);
     </form>
 
 
-
+<hr>
     <?php include("footer.html"); ?>
 </body>
 </html>
