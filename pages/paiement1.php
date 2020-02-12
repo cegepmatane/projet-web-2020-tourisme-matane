@@ -16,15 +16,16 @@ $id = $_GET["id"];
 </head>
 <body>
     <?php include("header.html"); ?>
-
-    <h1>Tourisme-Matane</h1>
-    <h2>Choisissez le nombre de personnes venant avec vous</h2>
-
+<hr>
+    <h1>Tourisme-Matane</h1><br>
+    <hr>
+    <h2>Choisissez le nombre de personnes venant avec vous</h2><br>
+<hr>
 
     <form action="./paiement2.php" method="get">
 
         <div class="div-principale">
-            <h2>Nombre de personnes</h2>
+            <h2>Nombre de personnes</h2><br>
             <ul id="personnes">
                 <li><input type="number" name="adultes" min="0" max="10" <?php echo "value=\"".'0'."\""?> > adultes(+18ans) ==> Prix par jour et par adulte : <?php echo $res[$id - 1]["prix_adulte"]?></li>
                 <li><input type="number" name="enfants" min="0" max="10" <?php echo "value=\"".'0'."\""?> > enfants(-18ans) ==> Prix par jour et par enfant : <?php echo $res[$id - 1]["prix_enfant"]?></li>
@@ -44,7 +45,7 @@ $id = $_GET["id"];
 
 
 
-
+<hr>
     <?php include("footer.html"); ?>
 </body>
 </html>

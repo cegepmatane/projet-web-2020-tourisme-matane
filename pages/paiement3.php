@@ -20,9 +20,9 @@ $prix = ($adultes * $res[$id - 1]["prix_adulte"] + $enfants * $res[$id - 1]["pri
 </head>
 <body>
     <?php include("header.html"); ?>
-
-    <h1>Tourisme-Matane</h1>
-    <h2>Acceptez les termes d'achat</h2>
+<hr>
+    <h1>Tourisme-Matane</h1><br><hr>
+    <h2>Acceptez les termes d'achat</h2><br><hr>
 
     <p>
         Vous acceptez tous les termes du contrat.<br>
@@ -30,7 +30,7 @@ $prix = ($adultes * $res[$id - 1]["prix_adulte"] + $enfants * $res[$id - 1]["pri
         Vous pouvez annuler le voyage sous la condition de le faire au minimum 8 jours à l'avance.<br>
         Si vous venez avec plus de personnes que prévu, envoyez un mail à supportdetourismematane@gmail.com.<br>
     </p>
-
+<hr>
     <form action="./paiement4.php" method="get">
         <div class="div-principale">
 
@@ -43,10 +43,9 @@ $prix = ($adultes * $res[$id - 1]["prix_adulte"] + $enfants * $res[$id - 1]["pri
                 </p>
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input id="button" type="submit" value="Accepter">
-                ?>
             </div>
         </div>
-    </form>
+    </form><br><hr>
 
     <?php include("footer.html"); ?>
 </body>

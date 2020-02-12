@@ -16,14 +16,17 @@ $prix = $_GET["prix"];
     <?php include("header.html"); ?>
 
     <h1>Tourisme-Matane</h1>
-    <h2>Bienvenue sur la page de paiement Paypal</h2>
+    <br>
+
+    <hr>
+    <h2>Cliquez sur le bouton pour passer au paiement Paypal !</h2>
 
 
-
+    <hr>
     <div class="div-principale">
         <div id="achat">
             <p>
-            <?php echo $prix; ?>
+            Prix final = <?php echo $prix." €"; ?>
             <form action="https://www.paypal.com/cgi-bbin/webscr" method="post">
                 <input type="hidden" name="charset" value="utf-8">
                 <input type="hidden" name="cmd" value="_xclick"/>
@@ -38,6 +41,7 @@ $prix = $_GET["prix"];
             </p>
         </div>
     </div>
+    <hr>
 
     <?php include("footer.html"); ?>
 </body>
