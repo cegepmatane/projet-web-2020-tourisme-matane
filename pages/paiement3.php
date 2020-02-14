@@ -31,7 +31,7 @@ $prix = ($adultes * $res[$id - 1]["prix_adulte"] + $enfants * $res[$id - 1]["pri
         Si vous venez avec plus de personnes que prévu, envoyez un mail à supportdetourismematane@gmail.com.<br>
     </p>
 <hr>
-    <form action="../scripts/ajout-facture.php" method="post">
+    <form action="./paiement4.php" method="post">
         <div class="div-principale">
 
             <div id="achat">

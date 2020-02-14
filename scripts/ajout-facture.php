@@ -27,6 +27,6 @@ $ajoutFacture->bindParam(':id_destination', $facture['id_destination'], PDO::PAR
 $ajoutFacture->bindParam(':prix_final', $facture['prix_final'], PDO::PARAM_STR);
 $ajoutFacture->execute();
 
-header("Location: ../pages/paiement4.php?id_destination=".$facture['id_destination']."&prix_final=".$facture['prix_final']);
+//header("Location: ../pages/paiement4.php?id_destination=".$facture['id_destination']."&prix_final=".$facture['prix_final']);
 
 ?>
