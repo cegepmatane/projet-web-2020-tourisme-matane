@@ -52,7 +52,7 @@
         <h3 class="titre-voyages">Liste des factures</h3>
         <?php
         include ('../scripts/recuperer-factures.php');
-        foreach (recupererFacturesWithIdUser(1) as $tab) {
+        foreach (recupererFacturesWithIdUser(0) as $tab) {
             $html = "
                 <div id=\"div-facture-profil\">
                     <div class=\"facture-profil-item\">

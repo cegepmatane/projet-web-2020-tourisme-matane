@@ -2,10 +2,11 @@
 use http\Header;
 require('../librairies/FPDF/tfpdf.php');
 include_once ('../scripts/recuperer-factures.php');
+//echo ('<head><title>Facture</title></head>');
 
 $PRIX_ADULTE = 100;
 $PRIX_ENFANT = 60;
-$PRIX_ANIMAUX = 50;
+    $PRIX_ANIMAUX = 50;
 
 $id = filter_var($_GET["id"], FILTER_VALIDATE_INT);
 
@@ -34,6 +35,7 @@ foreach ($db->query($sql_command) as $tab)
     );
 
 $pdf = new tFPDF();
+$pdf->SetTitle('Facture_'.$utilisateur["nom"].'_'.$utilisateur["prenom"].'_'.$id);
 $pdf->AddPage();
 $pdf->AddFont('DejaVu','','DejaVuSansCondensed.ttf',true);
 $pdf->SetFont('DejaVu','',30);
