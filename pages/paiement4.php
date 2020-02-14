@@ -1,6 +1,6 @@
 <?php
-$id = $_GET["id"];
-$prix = $_GET["prix"];
+$id = $_GET["id_destination"];
+$prix = $_GET["prix_final"];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
