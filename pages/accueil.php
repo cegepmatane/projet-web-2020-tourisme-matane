@@ -12,7 +12,7 @@
         <?php include("header.html"); ?>
         <hr/>
         <h1>Tourisme-Matane</h1>
-        <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane</p>
+        <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane<?php if(!empty($_GET["inscription-valide"])) { echo $_GET["inscription-valide"]; } ?></p>
         <a href="mission.php">
             <button id="bouton-decouvrir">Découvrir notre compagnie</button>
         </a>
