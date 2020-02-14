@@ -23,7 +23,3 @@
 .formulaire-inscription>input{
     padding: 20px;
 }
-
-.formulaire-inscription .style .col{
-    flex-direction: row;
-}
