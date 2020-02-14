@@ -31,17 +31,22 @@ $prix = ($adultes * $res[$id - 1]["prix_adulte"] + $enfants * $res[$id - 1]["pri
         Si vous venez avec plus de personnes que prévu, envoyez un mail à supportdetourismematane@gmail.com.<br>
     </p>
 <hr>
-    <form action="./paiement4.php" method="get">
+    <form action="./paiement4.php" method="post">
         <div class="div-principale">
 
             <div id="achat">
                 <p>
-                    <input type="hidden" name="prix" value="<?php echo $prix; ?>">
+                    <input type="hidden" name="prix_final" value="<?php echo $prix; ?>">
+                    <input type="hidden" name="nb_enfants" value="<?php echo $enfants; ?>">
+                    <input type="hidden" name="nb_adultes" value="<?php echo $adultes; ?>">
+                    <input type="hidden" name="nb_animaux" value="<?php echo $animaux; ?>">
+                    <input type="hidden" name="duree" value="<?php echo $duree; ?>">
+                    <input type="hidden" name="id_utilisateur" value="0">
+                    <input type="hidden" name="id_destination" value="<?php echo $id; ?>">
                     <?php
                         echo $prix." €";
                     ?>
                 </p>
-                <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input id="button" type="submit" value="Accepter">
             </div>
         </div>

@@ -14,20 +14,20 @@
 
         <h1 class="titre-page">Connexion</h1>
 
-        <form class="formulaire-connexion" method="POST" action="reponse-connexion.php">
+        <form class="formulaire-connexion" method="POST" action="../scripts/reponse-connexion.php">
             <div class="critere">
                 <label for="mail">Adresse mail</label>
-                <input type="text" placeholder="adresse@mail.com" id="mail" required>
+                <input type="email" placeholder="adresse@mail.com" id="mail" name="mail" required>
             </div>
 
             <div class="critere">
                 <label for="mot-de-passe">Mot de passe</label>
-                <input type="password" placeholder="mot de passe" id="mot-de-passe" required>
+                <input type="password" placeholder="mot de passe" id="mot-de-passe" name="mot-de-passe" required>
 <!--                <a href="oubli-mot-de-passe.php">J'ai oublié mon mot de passe</a>-->
             </div>
 
             <label><input type="checkbox" id="se-souvenir"> Se souvenir de moi</label>
-            <button id="bouton-se-connecter" type="submit">Se connecter</button>
+            <button type="submit">Se connecter</button>
             
             <a href="inscription.php">Je n'ai pas de compte, s'inscrire</a>
         </form>
