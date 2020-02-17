@@ -23,3 +23,8 @@
 .formulaire-inscription>input{
     padding: 20px;
 }
+
+.formulaire-inscription .style .erreur{
+    color: red;
+    font-size: small;
+}

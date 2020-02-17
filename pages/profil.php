@@ -73,6 +73,9 @@
                     <div class=\"facture-profil-item\">
                         <p>Prix : ".$tab["prix_final"]."€</p>
                     </div>
+                    <div class=\"facture-profil-item\">
+                        <a target=\"_blank\" href='../scripts/generer-pdf-facture.php?id=".$tab["id_facture"]."'>Télécharger la facture</a>
+                    </div>
                 </div>
                 ";
             echo $html;
