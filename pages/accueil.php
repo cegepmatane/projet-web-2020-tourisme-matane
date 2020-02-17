@@ -9,7 +9,7 @@
         <title>Tourisme-Matane</title>
     </head>
     <body>
-        <?php include("header.html"); ?>
+        <?php include("header.php"); ?>
         <hr/>
         <h1>Tourisme-Matane</h1>
         <p>Bienvenue sur le site de l'agence de voyage Tourisme-Matane<?php if(!empty($_GET["inscription-valide"])) { echo $_GET["inscription-valide"]; } ?></p>

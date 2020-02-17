@@ -16,13 +16,6 @@
     $requeteUtilisateur->execute();
     $utilisateur = $requeteUtilisateur->fetch();
 
-    var_dump($utilisateur["mot_de_passe"]);
-    var_dump($identifiants["mot-de-passe"]);
-    var_dump(password_verify($identifiants["mot-de-passe"], trim($utilisateur["mot_de_passe"])));
-
-    $hash = (string)password_hash('bobo', PASSWORD_DEFAULT);
-    var_dump(password_verify('bobo', $hash));
-
     $motDePasseCorrect = password_verify($identifiants['mot-de-passe'], trim($utilisateur['mot_de_passe']));
 
     if (!$utilisateur)
@@ -38,8 +31,15 @@
             $_SESSION['prenom'] = $utilisateur['prenom'];
             $_SESSION['nom'] = $utilisateur['nom'];
             $_SESSION['mail'] = $utilisateur['mail'];
-            echo "Vous êtes connecté en tant que ".$_SESSION['prenom']." ".$_SESSION['nom'];
-            //header("Location: ../pages/accueil.php");
+            if (isset($_SESSION['id']))
+		    {
+			    echo '<a href="profil.php">Mon profil</a>';
+		    }
+		    else
+		    {
+			    echo '<a href="formulaire-connexion.php">Connexion</a>';
+		    }
+            header("Location: ../pages/accueil.php");
         }
         else
         {
