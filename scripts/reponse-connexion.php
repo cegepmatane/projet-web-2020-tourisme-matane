@@ -16,18 +16,14 @@
     $requeteUtilisateur->execute();
     $utilisateur = $requeteUtilisateur->fetch();
 
-    echo $utilisateur["mot_de_passe"].'<br/>';
-    echo $identifiants["mot-de-passe"].'<br/>';
-    if (password_verify($identifiants["mot-de-passe"], trim($utilisateur["mot_de_passe"])))
-    {
-        echo "TRUE";
-    }
-    else
-    {
-        echo "FALSE";
-    }
+    var_dump($utilisateur["mot_de_passe"]);
+    var_dump($identifiants["mot-de-passe"]);
+    var_dump(password_verify($identifiants["mot-de-passe"], trim($utilisateur["mot_de_passe"])));
 
-    $motDePasseCorrect = password_verify($identifiants['mot-de-passe'], $utilisateur['mot_de_passe']);
+    $hash = (string)password_hash('bobo', PASSWORD_DEFAULT);
+    var_dump(password_verify('bobo', $hash));
+
+    $motDePasseCorrect = password_verify($identifiants['mot-de-passe'], trim($utilisateur['mot_de_passe']));
 
     if (!$utilisateur)
     {
