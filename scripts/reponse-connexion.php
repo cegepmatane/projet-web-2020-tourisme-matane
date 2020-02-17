@@ -20,7 +20,7 @@
 
     if (!$utilisateur)
     {
-        echo "<p class='error'>L'adresse mail est incorrecte.</p>";
+        header("Location: ../pages/formulaire-connexion.php?erreur-mail=l'adresse mail n'est pas valide");;
     }
     else
     {
@@ -43,7 +43,7 @@
         }
         else
         {
-            echo "<p class='error'>L'adresse mail et le mot de passe ne correspondent pas.</p>";
+            header("Location: ../pages/formulaire-connexion.php?erreur-mot-de-passe=Le mot de passe n'est pas correcte");;
         }
     }
 

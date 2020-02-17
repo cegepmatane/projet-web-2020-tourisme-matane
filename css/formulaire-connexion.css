@@ -34,3 +34,8 @@
     margin-bottom: 1%;
 }
 
+.formulaire-connexion .critere .erreur{
+    color: red;
+    font-size: small;
+    padding: 0px;
+}
