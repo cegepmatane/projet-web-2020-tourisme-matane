@@ -40,11 +40,13 @@
 		session_start();
 		if (isset($_SESSION['id']))
 		{
-			echo '<a href="profil.php">Mon profil</a>';
+			echo '<a class="lien-navigation" href="profil.php">Mon profil</a>';
+			echo '<a class="lien-navigation" href="../scripts/reponse-deconnexion.php">Déconnexion</a>';
 		}
 		else
 		{
-			echo '<a href="formulaire-connexion.php">Connexion</a>';
+			echo '<a class="lien-navigation" href="formulaire-connexion.php">Connexion</a>';
+			echo '<a class="lien-navigation" href="inscription.php">Inscription</a>';
 		}
 	?>
 

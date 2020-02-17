@@ -14,45 +14,38 @@
 
         <h1 class="titre-page">Profil</h1>
 
-        <h2 class="nom">Prenom Nom</h2>
+        <h2 class="nom"><?php echo $_SESSION['prenom'].' '.$_SESSION['nom']; ?></h2>
 
         <div class="informations">
-            <p class="adresse-mail">adresse@mail.fr</p>
+            <p class="adresse-mail"><?php echo $_SESSION['mail']; ?></p>
         </div>
 
-        <div class="factures">
+        <hr/>
+        <div class="voyages">
             <h3 class="titre-voyages">Mes prochains voyages</h3>
             <ul class="liste-voyages">
-                <li class="voyage">
-                    <ul class="details-voyage">
-                        <li class="destination">Montréal</li>
-                        <li class="date">10/02/2019</li>
-                        <li class="prix">349.99 €</li>
-                    </ul>
-                </li>
-                <li class="voyage">
-                    <ul class="details-voyage">
-                        <li class="destination">Paris</li>
-                        <li class="date">18/05/2009</li>
-                        <li class="prix">88.99 €</li>
-                    </ul>
-                </li>
-                <li class="voyage">
-                    <ul class="details-voyage">
-                        <li class="destination">Matane</li>
-                        <li class="date">09/12/2020</li>
-                        <li class="prix">860.00 €</li>
-                    </ul>
-                </li>
+                <?php include ('../scripts/recuperer-factures.php');
+                foreach (recupererFacturesWithIdUser($_SESSION['id']) as $tab)
+                {
+                    echo '
+                        <li class="voyage">
+                            <ul class="details-voyage">
+                                <li class="destination">'.$tab["id_destination"].'</li>
+                                <li class="date">10/02/2019</li>
+                                <li class="prix">'.$tab["prix_final"].' €</li>
+                            </ul>
+                        </li>
+                    ';
+                }
+                ?>
             </ul>
         </div>
 
         <!-- Mes factures -->
         <hr/>
-        <h3 class="titre-voyages">Liste des factures</h3>
+        <h3 class="titre-factures">Liste des factures</h3>
         <?php
-        include ('../scripts/recuperer-factures.php');
-        foreach (recupererFacturesWithIdUser(1) as $tab) {
+        foreach (recupererFacturesWithIdUser($_SESSION['id']) as $tab) {
             $html = "
                 <div id=\"div-facture-profil\">
                     <div class=\"facture-profil-item\">
@@ -81,7 +74,7 @@
             echo $html;
         }
         ?>
-        <a class="lien-deconnexion" href="deconnexion.php">Se déconnecter</a>
+        <a class="lien-deconnexion" href="../scripts/reponse-deconnexion.php">Se déconnecter</a>
         <br/>
         <!-- Footer -->
         <hr/>

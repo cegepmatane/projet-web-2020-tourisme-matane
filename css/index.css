@@ -29,6 +29,10 @@ header a:hover{
     color: #B36A8F;
 }
 
+.lien-navigation {
+    margin: 0 1vw;
+}
+
 footer{
     display: flex;
     flex-wrap: wrap;
