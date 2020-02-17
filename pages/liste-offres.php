@@ -12,7 +12,7 @@ $id = 1;
         <base target="_parent">
     </head>
     <body>
-        <?php include("header.html"); ?>
+        <?php include("header.php"); ?>
         <hr/>
         <!-- Filtre et recherche -->
         <!-- <div> 

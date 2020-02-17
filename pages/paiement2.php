@@ -19,7 +19,7 @@ $date = new DateTime($res[$id - 1]["debut"]);
     <title>Tourisme-Matane</title>
 </head>
 <body>
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 <hr>
     <h1>Tourisme-Matane</h1><br><hr>
     <h2>Choisissez les dates de votre séjour</h2><br><hr>

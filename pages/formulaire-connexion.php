@@ -9,7 +9,7 @@
     </head>
     <body>
         <!-- Header -->
-        <?php include("header.html"); ?>
+        <?php include("header.php"); ?>
         <hr/>
 
         <h1 class="titre-page">Connexion</h1>

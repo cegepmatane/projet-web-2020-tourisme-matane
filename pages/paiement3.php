@@ -19,7 +19,7 @@ $prix = ($adultes * $res[$id - 1]["prix_adulte"] + $enfants * $res[$id - 1]["pri
     <title>Tourisme-Matane</title>
 </head>
 <body>
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 <hr>
     <h1>Tourisme-Matane</h1><br><hr>
     <h2>Acceptez les termes d'achat</h2><br><hr>

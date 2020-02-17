@@ -13,7 +13,7 @@
 	<base target="_parent">
 </head>
 <body>
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 <hr/>
 <?php
     if(!filter_var($id, FILTER_VALIDATE_INT) === false){ ?>
