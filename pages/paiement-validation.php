@@ -10,7 +10,7 @@
     <base target="_parent">
 </head>
 <body>
-<?php include("header.html"); ?>
+<?php include("header.php"); ?>
 <hr/>
 <h1>Paiement</h1>
 <h2>Paiement effectué, vous pouvez retourner sur la page d'accueil ou quitter le site.</h2>

@@ -15,7 +15,7 @@ $id = $_GET["id"];
     <title>Tourisme-Matane</title>
 </head>
 <body>
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 <hr>
     <h1>Tourisme-Matane</h1><br>
     <hr>

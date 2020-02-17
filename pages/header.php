@@ -36,9 +36,16 @@
 	    </ul>
 	</nav>
 
-		
-  	<a href="formulaire-connexion.php">
-       	<img src="../decoration/profil.jpg" alt="Icone Profil" title="Profil">
-	</a>
+	<?php
+		session_start();
+		if (isset($_SESSION['id']))
+		{
+			echo '<a href="profil.php">Mon profil</a>';
+		}
+		else
+		{
+			echo '<a href="formulaire-connexion.php">Connexion</a>';
+		}
+	?>
 
 </header>
