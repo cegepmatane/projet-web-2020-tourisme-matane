@@ -5,24 +5,42 @@
     $filterUtilisateur = array(
         'prenom' => FILTER_SANITIZE_STRING,
         'nom' => FILTER_SANITIZE_STRING,
-        'date_naissance' => FILTER_SANITIZE_STRING,
+        'date-naissance' => FILTER_SANITIZE_STRING,
         'mail' => FILTER_SANITIZE_STRING,
-        'mot_de_passe' => FILTER_SANITIZE_STRING,
+        'mot-de-passe' => FILTER_SANITIZE_STRING,
+        'validation-mot-de-passe' => FILTER_SANITIZE_STRING,
     );
     $utilisateur = filter_input_array(INPUT_POST, $filterUtilisateur);
 
-    $utilisateur['mot_de_passe'] = password_hash($utilisateur['mot_de_passe'], PASSWORD_DEFAULT);
+    if($utilisateur['mot-de-passe'] == $utilisateur['validation-mot-de-passe']){
 
-    $SQL_AJOUTER_UTILISATEUR = "INSERT INTO UTILISATEUR (prenom, nom, date_naissance, mail, mot_de_passe)
-                                    VALUES (:prenom, :nom, :date_naissance, :mail, :mot_de_passe)";
-    
-    $ajoutUtilisateur = $db->prepare($SQL_AJOUTER_UTILISATEUR);
-    $ajoutUtilisateur->bindParam(':prenom', $utilisateur['prenom'], PDO::PARAM_STR);
-    $ajoutUtilisateur->bindParam(':nom', $utilisateur['nom'], PDO::PARAM_STR);
-    $ajoutUtilisateur->bindParam(':date_naissance', $utilisateur['date_naissance'], PDO::PARAM_STR);
-    $ajoutUtilisateur->bindParam(':mail', $utilisateur['mail'], PDO::PARAM_STR);
-    $ajoutUtilisateur->bindParam(':mot_de_passe', $utilisateur['mot_de_passe'], PDO::PARAM_STR);
-    $ajoutUtilisateur->execute();
+        $verificationMail = $db->prepare("SELECT * FROM UTILISATEUR WHERE mail = :mail");
+        $verificationMail->bindParam(':mail', $utilisateur['mail'], PDO::PARAM_STR);
+        $verificationMail->execute(); 
+        $mailUtilisateur = $verificationMail->fetch();
 
-    header("Location: ../pages/accueil.php");
+        if (!$mailUtilisateur) { // Le mail n'existe pas dans la base de données
+
+            $utilisateur['mot-de-passe'] = password_hash($utilisateur['mot-de-passe'], PASSWORD_DEFAULT);
+
+            $SQL_AJOUTER_UTILISATEUR = "INSERT INTO UTILISATEUR (prenom, nom, date_naissance, mail, mot_de_passe)
+                                            VALUES (:prenom, :nom, :date_naissance, :mail, :mot_de_passe)";
+            
+            $ajoutUtilisateur = $db->prepare($SQL_AJOUTER_UTILISATEUR);
+            $ajoutUtilisateur->bindParam(':prenom', $utilisateur['prenom'], PDO::PARAM_STR);
+            $ajoutUtilisateur->bindParam(':nom', $utilisateur['nom'], PDO::PARAM_STR);
+            $ajoutUtilisateur->bindParam(':date_naissance', $utilisateur['date-naissance'], PDO::PARAM_STR);
+            $ajoutUtilisateur->bindParam(':mail', $utilisateur['mail'], PDO::PARAM_STR);
+            $ajoutUtilisateur->bindParam(':mot_de_passe', $utilisateur['mot-de-passe'], PDO::PARAM_STR);
+            $ajoutUtilisateur->execute();
+
+            header("Location: ../pages/accueil.php?inscription-valide=,votre compte à bien été créé");
+        }
+        else{ // Le mail existe dans la base de données
+            header("Location: ../pages/inscription.php?erreur=Le mail que vous avez entré est déjà utilisé");
+        }
+    }
+    else{
+        header("Location: ../pages/inscription.php?erreur=Le mot de passe de validation est différent du mot de passe");
+    }
 ?>

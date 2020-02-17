@@ -23,16 +23,22 @@
                 <input type="text" name="nom" id="nom" required>
             </div>
             <div class="style">
-                <label for="date_naissance">Date de naissance</label>
-                <input type="date" name="date_naissance" id="date_naissance" required>
+                <label for="date-naissance">Date de naissance</label>
+                <input type="date" name="date-naissance" id="date-naissance" required>
             </div>
             <div class="style">
                 <label for="mail">Adresse mail</label>
                 <input type="email" name="mail" id="mail" required>
+                <?php if(!empty($_GET["erreur"])) { echo "<p class=\"erreur\">" . $_GET["erreur"] . "</p>"; }?>
             </div>
             <div class="style">
                 <label for="mot-de-passe">Mot de passe</label>
                 <input type="password" name="mot-de-passe" id="mot-de-passe" required>
+            </div>
+            <div class="style">
+                <label for="validation-mot-de-passe">Validation du mot de passe</label>
+                <input type="password" name="validation-mot-de-passe" id="validation-mot-de-passe" required>
+                <?php if(!empty($_GET["erreur"])) { echo "<p class=\"erreur\">" . $_GET["erreur"] . "</p>"; }?>
             </div>
             <div class="validation">
                 <input class="bouton" type="submit" name="submit" value="Valider">
