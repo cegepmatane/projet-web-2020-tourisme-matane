@@ -4,7 +4,7 @@
     margin-right: 2.5vw;
 }
 
-.titre-voyages {
+h3 {
     color: #D9A566;
 }
 
@@ -24,7 +24,7 @@ ul {
     margin-right: 20vw;
 }
 
-.titre-page, .nom, .informations, .factures {
+.titre-page, .nom, .informations, .voyages, .titre-factures {
     margin-left: 2.5vw;
 }
 

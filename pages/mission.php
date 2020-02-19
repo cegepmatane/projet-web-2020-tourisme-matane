@@ -9,7 +9,7 @@
         <base target="_parent">
     </head>
     <body>
-        <?php include("header.html"); ?>
+        <?php include("header.php"); ?>
         <hr/>
         <h1 class="titre-page">A propos de nous</h1>
 

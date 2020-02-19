@@ -37,10 +37,10 @@
             header("Location: ../pages/accueil.php?inscription-valide=,votre compte à bien été créé");
         }
         else{ // Le mail existe dans la base de données
-            header("Location: ../pages/inscription.php?erreur=Le mail que vous avez entré est déjà utilisé");
+            header("Location: ../pages/inscription.php?erreur-mail=Le mail que vous avez entré est déjà utilisé");
         }
     }
     else{
-        header("Location: ../pages/inscription.php?erreur=Le mot de passe de validation est différent du mot de passe");
+        header("Location: ../pages/inscription.php?erreur-mot-de-passe=Le mot de passe de validation est différent du mot de passe");
     }
 ?>

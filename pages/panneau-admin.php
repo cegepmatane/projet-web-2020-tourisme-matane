@@ -9,7 +9,7 @@
         <title>Tourisme-Matane</title>
     </head>
     <body>
-        <?php include("header.html"); ?>
+        <?php include("header.php"); ?>
         <hr/>
         <h1>Panneau d'administration</h1>
 		<h2>Liste des offres modifiables</h2>

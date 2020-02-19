@@ -12,7 +12,7 @@ require_once("../scripts/ajout-facture.php");
     <title>Tourisme-Matane</title>
 </head>
 <body>
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 
     <h1>Tourisme-Matane</h1>
     <br>
