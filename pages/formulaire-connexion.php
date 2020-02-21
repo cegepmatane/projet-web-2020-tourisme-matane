@@ -13,6 +13,7 @@
         <hr/>
 
         <h1 class="titre-page">Connexion</h1>
+        <?php if(!empty($_GET["inscription-valide"])) { echo "<h2>" . $_GET["inscription-valide"] . "</h2>"; } ?>
 
         <form class="formulaire-connexion" method="POST" action="../scripts/reponse-connexion.php">
             <div class="critere">
@@ -25,7 +26,7 @@
                 <label for="mot-de-passe">Mot de passe</label>
                 <input type="password" placeholder="mot de passe" id="mot-de-passe" name="mot-de-passe" required>
                 <?php if(!empty($_GET["erreur-mot-de-passe"])) { echo "<p class=\"erreur\">" . $_GET["erreur-mot-de-passe"] . "</p>"; }?>
-<!--                <a href="oubli-mot-de-passe.php">J'ai oublié mon mot de passe</a>-->
+                <a href="oubli-mot-de-passe.php">J'ai oublié mon mot de passe</a>
             </div>
 
             <label><input type="checkbox" id="se-souvenir"> Se souvenir de moi</label>

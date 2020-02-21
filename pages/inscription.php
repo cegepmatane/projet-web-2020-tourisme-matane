@@ -41,7 +41,7 @@
                 <?php if(!empty($_GET["erreur-mot-de-passe"])) { echo "<p class=\"erreur\">" . $_GET["erreur-mot-de-passe"] . "</p>"; }?>
             </div>
             <div class="style">
-                <input class="bouton" type="submit" name="submit" value="Valider">
+                <input class="bouton" type="submit" name="submit" value="S'inscrire">
                 <a class="compte" href="formulaire-connexion.php">Vous possédez déjà un compte.</a>
             </div>
         </form>

@@ -34,7 +34,7 @@
             $ajoutUtilisateur->bindParam(':mot_de_passe', $utilisateur['mot-de-passe'], PDO::PARAM_STR);
             $ajoutUtilisateur->execute();
 
-            header("Location: ../pages/accueil.php?inscription-valide=,votre compte à bien été créé");
+            header("Location: ../pages/formulaire-connexion.php?inscription-valide=Votre compte à bien été créé");
         }
         else{ // Le mail existe dans la base de données
             header("Location: ../pages/inscription.php?erreur-mail=Le mail que vous avez entré est déjà utilisé");
