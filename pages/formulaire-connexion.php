@@ -13,9 +13,9 @@
         <hr/>
 
         <h1 class="titre-page">Connexion</h1>
-        <?php if(!empty($_GET["inscription-valide"])) { echo "<h2>" . $_GET["inscription-valide"] . "</h2>"; } ?>
-
+        
         <form class="formulaire-connexion" method="POST" action="../scripts/reponse-connexion.php">
+        <?php if(!empty($_GET["inscription-valide"])) { echo "<p class=\"inscription-valide\">" . $_GET["inscription-valide"] . "</p>"; } ?>
             <div class="critere">
                 <label for="mail">Adresse mail</label>
                 <input type="email" placeholder="adresse@mail.com" id="mail" name="mail" required>

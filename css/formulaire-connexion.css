@@ -39,3 +39,8 @@
     font-size: small;
     padding: 0px;
 }
+
+.formulaire-connexion .inscription-valide{
+    color: lime;
+    font-size: small;
+}
