@@ -20,7 +20,7 @@
         <div id="ligne">
             <div id="cote">
                 <?php
-                echo "<img src=\"".$res[$id - 1]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+                echo "<img id=\"image-offre\" src=\"".$res[$id - 1]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
                 ?>
             </div>
 
