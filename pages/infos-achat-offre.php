@@ -1,6 +1,6 @@
 <?php
     include('../Scripts/recuperer-destinations.php');
-    $res = recupererDestinations();
+    $res = recupererDestination($_GET["id"]);
     $id = $_GET["id"];
 ?>
 <!DOCTYPE html>
@@ -20,14 +20,14 @@
         <div id="ligne">
             <div id="cote">
                 <?php
-                echo "<img id=\"image-offre\" src=\"".$res[$id - 1]["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+                echo "<img id=\"image-offre\" src=\"".$res["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
                 ?>
             </div>
 
             <div class="div-principale">
-                <h1 id="nom_offre">Visite de la ville de <?php echo $res[$id - 1]["ville"]?> </h1>
+                <h1 id="nom_offre">Visite de la ville de <?php echo $res["ville"]?> </h1>
                 <?php
-                echo "<p class=\"text-destination\">".$res[$id - 1]["description"]."</p>";
+                echo "<p class=\"text-destination\">".$res["description"]."</p>";
                 ?>
             </div>
 
