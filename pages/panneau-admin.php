@@ -19,87 +19,80 @@
         <?php
         include ('../scripts/recuperer-destinations.php');
         foreach (recupererDestinations() as $tab) {
-            $html = "
-                <div id=\"div-destination-admin\">
-                    <div class=\"destination-admin-item\">
-                        <img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>
-                        <!--<button id=\"change_image\">Change</button>-->
+        ?>
+                <div class="div-destination-admin" id="<?= $tab["id_offre"] ?>">
+                    <div class="destination-admin-item">
+                        <img src="<?= $tab["url_image"] ?>" class="img-destination" alt="Image représentant la destination"/>
+                        <!--<button id="change_image">Change</button>-->
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Ville : ".$tab["ville"]."</p>
-                        <!--<button id=\"change_ville\">Change</button>-->
+                    <div class="destination-admin-item">
+                        <p>Ville : <?= $tab["ville"] ?></p>
+                        <!--<button id="change_ville">Change</button>-->
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Prix : ".$tab["prix"]."€</p>
-                        <!--<button id=\"change_prix\">Change</button>-->
+                    <div class="destination-admin-item">
+                        <p>Prix : <?= $tab["prix"] ?>€</p>
+                        <!--<button id="change_prix">Change</button>-->
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Début : ".$tab["debut"]."</p>
-                        <!--<button id=\"change_date\">Change</button>-->
+                    <div class="destination-admin-item">
+                        <p>Début : <?= $tab["debut"] ?></p>
+                        <!--<button id="change_date">Change</button>-->
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Durée : ".$tab["duree"]." jours</p>
-                        <!--<button id=\"change_duree\">Change</button>-->
+                    <div class="destination-admin-item">
+                        <p>Durée : <?= $tab["duree"] ?> jours</p>
+                        <!--<button id="change_duree">Change</button>-->
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Description :".$tab["description"]."</p>
-                        <!--<button id=\"change_description\">Change</button>-->
+                    <div class="destination-admin-item">
+                        <p>Description : <?= $tab["description"] ?></p>
+                        <!--<button id="change_description">Change</button>-->
                     </div>
-                    <div class=\"destination-admin-item\">
+                    <div class="destination-admin-item">
                         <p>Afficher sur l'accueil :</p>
-                        <label class=\"switch\">
-                            <input id=\"change_sur_accueil\" type=\"checkbox\"";
-            if($tab["sur_accueil"]==1){
-                $html.= "checked=true";
-            }else{
-                //$html.= "checked=false";
+                        <label class="switch">
+                            <input id="change_sur_accueil" type="checkbox";
+            <?php if($tab["sur_accueil"]==1){
+                echo "checked=true";
             }
-                $html .= ">
-                            <span class=\"slider round\"></span>
+            ?>
+                    />
+                            <span class="slider round"></span>
                         </label>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <a href='../scripts/suppression-offre.php?id=".$tab["id_offre"]."'>Supprimer</a>
-                        <a href='../pages/formulaire-modifier-offre.php?id=".$tab["id_offre"]."'>Modifier</a>
+                    <div class="destination-admin-item">
+                        <a href='../scripts/suppression-offre.php?id="<?= $tab["id_offre"] ?>"'>Supprimer</a>
+                        <a href='../pages/formulaire-modifier-offre.php?id="<?= $tab["id_offre"] ?>"'>Modifier</a>
                     </div>
                 </div>
-                ";
-            echo $html;
-        }
-        ?>
+        <?php } ?>
         <h2>Liste des factures</h2>
         <hr/>
             <?php
             include ('../scripts/recuperer-factures.php');
             foreach (recupererFactures() as $tab) {
-                $html = "
-                <div id=\"div-destination-admin\">
-                    <div class=\"destination-admin-item\">
-                        <p>Utilisateur : ".$tab["id_utilisateur"]."</p>
+            ?>
+                <div id="div-destination-admin">
+                    <div class="destination-admin-item">
+                        <p>Utilisateur : <?= $tab["id_utilisateur"] ?></p>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Destination : ".$tab["id_destination"]."</p>
+                    <div class="destination-admin-item">
+                        <p>Destination : <?= $tab["id_destination"]?></p>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Adultes : ".$tab["nb_adultes"]."</p>
+                    <div class="destination-admin-item">
+                        <p>Adultes : <?= $tab["nb_adultes"] ?></p>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Enfants : ".$tab["nb_enfants"]."</p>
+                    <div class="destination-admin-item">
+                        <p>Enfants : <?= $tab["nb_enfants"] ?></p>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Animaux :".$tab["nb_animaux"]."</p>
+                    <div class="destination-admin-item">
+                        <p>Animaux : <?= $tab["nb_animaux"] ?></p>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Durée : ".$tab["duree"]." jours</p>
+                    <div class="destination-admin-item">
+                        <p>Durée : <?= $tab["duree"] ?> jours</p>
                     </div>
-                    <div class=\"destination-admin-item\">
-                        <p>Prix : ".$tab["prix_final"]."€</p>
+                    <div class="destination-admin-item">
+                        <p>Prix : <?= $tab["prix_final"] ?>€</p>
                     </div>
                 </div>
-                ";
-                echo $html;
-            }
-            ?>
+            <?php } ?>
         <hr/>
         <?php include("footer.html"); ?>
     </body>
