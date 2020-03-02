@@ -38,11 +38,12 @@ include ('connexion.php');
 $maximum = recupererNombreDestination();
 $answer = recupererDestination(rand(1, $maximum));
 
-echo "<a href=\"./infos-achat-offre.php?id=".$answer['id_offre']."\"/>";
-echo "<div class=\"div-destination\">";
-echo "<img src=\"".$answer["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
-echo "<div>";
-echo "<p>".$answer["description"]."</p>";
-echo "<p>Prix : ".$answer["prix"]." €</p>";
-echo "</div></div></a>";
+$html =  "<a href=\"./infos-achat-offre.php?id=".$answer['id_offre']."\"/>";
+$html .=  "<div class=\"div-destination\">";
+$html .= "<img src=\"".$answer["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
+$html .= "<div>";
+$html .= "<p>".$answer["description"]."</p>";
+$html .= "<p>Prix : ".$answer["prix"]." €</p>";
+$html .= "</div></div></a>";
+echo $html;
 ?>

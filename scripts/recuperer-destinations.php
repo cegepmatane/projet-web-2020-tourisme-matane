@@ -28,6 +28,7 @@ include ('connexion.php');
 
     function recupererDestination($id){
         global $db;
+        $answer = array();
         $sql_command = "SELECT * from OFFRE WHERE id_offre=".$id;
         foreach ($db->query($sql_command) as $tab) {
             $answer = array(
