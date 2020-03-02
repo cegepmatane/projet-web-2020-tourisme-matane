@@ -7,6 +7,17 @@
         <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
+        <script>
+            function afficherOffreAleatoire(){
+                var url='../scripts/recuperer-destination-aleatoire';
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    document.getElementById("div-destination-aleatoire").innerHTML = this.responseText;
+                };
+                xhttp.open("GET", url, true);
+                xhttp.send();
+            }
+        </script>
     </head>
     <body>
         <?php include("header.php"); ?>
@@ -37,12 +48,20 @@
         </form>
         <hr/>
 
+        <h1>Trouver une destination aléatoire</h1>
+        <button id="bouton-aleatoire" onclick="afficherOffreAleatoire()">Chercher</button>
+        <div id="div-destination-aleatoire">
+
+        </div>
+
+
+
         <h1>Nos destinations les plus visitées</h1>
         <?php
             include('../scripts/recuperer-destinations.php');
             foreach (recupererDestinations() as $tab){
                 if($tab["sur_accueil"]){
-                    $html = "<a href=\"#\">";
+                    $html = "<a href=\"./infos-achat-offre.php?id=".$tab['id_offre']."\"/>";
                     $html .= "<div class=\"div-destination\">";
                     $html .= "<img src=\"".$tab["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
                     $html .= "<div>";
