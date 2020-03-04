@@ -11,15 +11,14 @@
         <script>
             function recevoirMessageServeur(ajax)
             {
-                console.log("recevoirPenseeMagique()");
-                console.log("reponse="+ajax.responseText);
+                console.log("recevoirMessageServeur");
 
                 let reponse = JSON.parse(ajax.responseText);
 
                 let message = reponse.message;
                 console.log("message = " + message);
-
-                document.getElementById('message_serveur_modif').innerHTML = message;
+                if(message==="enregistré")
+                    pDescription.innerHTML = "Description :<br> " + (input.value+"").split("\n").join("<br>");
             }
         </script>
     </head>
@@ -36,6 +35,7 @@
         foreach (recupererDestinations() as $tab) {
         ?>
                 <div class="div-destination-admin" id="<?= $tab["id_offre"] ?>">
+                    <p id="message_serveur_modif"></p>
                     <div class="destination-admin-item">
                         <img src="<?= $tab["url_image"] ?>" class="img-destination" alt="Image représentant la destination"/>
                         <!--<button id="change_image">Change</button>-->
@@ -120,11 +120,10 @@
             pDescription.innerHTML ="<textarea id='"+idInput+"' style='height: 100%;'>"+text.split("<br>").join("\n")+"</textarea>";
             let input = document.getElementById(idInput);
             input.addEventListener("mouseout",function(){
-                pDescription.innerHTML = "Description :<br> " + (input.value+"").split("\n").join("<br>");
                 //Ajax
                 let ajax = new Ajax();
                 console.log(ajax);
-                ajax.executer("POST", "http://localhost/scripts/ajax-modifier-offre.php","",recevoirMessageServeur());
+                ajax.executer("POST", "../scripts/ajax-modifier-offre.php","",recevoirMessageServeur);
                 pDescription.addEventListener("click",pDescriptionEvent);
             });
             pDescription.removeEventListener("click",arguments.callee);
