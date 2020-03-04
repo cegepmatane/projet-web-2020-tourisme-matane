@@ -7,6 +7,21 @@
         <link rel="stylesheet" href="../css/index.css">
         <base target="_parent">
         <title>Tourisme-Matane</title>
+        <script type="text/javascript" src="../librairies/Ajax.js"></script>
+        <script>
+            function recevoirMessageServeur(ajax)
+            {
+                console.log("recevoirPenseeMagique()");
+                console.log("reponse="+ajax.responseText);
+
+                let reponse = JSON.parse(ajax.responseText);
+
+                let message = reponse.message;
+                console.log("message = " + message);
+
+                document.getElementById('message_serveur_modif').innerHTML = message;
+            }
+        </script>
     </head>
     <body>
         <?php include("header.php"); ?>
@@ -41,8 +56,8 @@
                         <p>Durée : <?= $tab["duree"] ?> jours</p>
                         <!--<button id="change_duree">Change</button>-->
                     </div>
-                    <div class="destination-admin-item">
-                        <p>Description : <?= $tab["description"] ?></p>
+                    <div class="destination-admin-item" onclick="">
+                        <p id="<?= $tab["id_offre"] . "description"?>">Description :<br> <?= $tab["description"] ?></p>
                         <!--<button id="change_description">Change</button>-->
                     </div>
                     <div class="destination-admin-item">
@@ -69,7 +84,7 @@
             include ('../scripts/recuperer-factures.php');
             foreach (recupererFactures() as $tab) {
             ?>
-                <div id="div-destination-admin">
+                <div class="div-destination-admin">
                     <div class="destination-admin-item">
                         <p>Utilisateur : <?= $tab["id_utilisateur"] ?></p>
                     </div>
@@ -96,4 +111,25 @@
         <hr/>
         <?php include("footer.html"); ?>
     </body>
+    <script>
+        let idOffre = 5;
+        let pDescription = document.getElementById(idOffre+"description");
+        let pDescriptionEvent = function () {
+            let text = pDescription.innerHTML.substr(18,pDescription.innerHTML.length);
+            let idInput = Math.random() + "";
+            pDescription.innerHTML ="<textarea id='"+idInput+"' style='height: 100%;'>"+text.split("<br>").join("\n")+"</textarea>";
+            let input = document.getElementById(idInput);
+            input.addEventListener("mouseout",function(){
+                pDescription.innerHTML = "Description :<br> " + (input.value+"").split("\n").join("<br>");
+                //Ajax
+                let ajax = new Ajax();
+                console.log(ajax);
+                ajax.executer("POST", "http://localhost/scripts/ajax-modifier-offre.php","",recevoirMessageServeur());
+                pDescription.addEventListener("click",pDescriptionEvent);
+            });
+            pDescription.removeEventListener("click",arguments.callee);
+        };
+
+        pDescription.addEventListener("click",pDescriptionEvent);
+    </script>
 </html>
