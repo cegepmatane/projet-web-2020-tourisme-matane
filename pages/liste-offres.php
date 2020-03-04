@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <title>Tourisme Matane</title>
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/theme.css">
