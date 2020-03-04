@@ -39,7 +39,7 @@ $maximum = recupererNombreDestination();
 $answer = recupererDestination(rand(1, $maximum));
 ?>
 
-<a href='./infos-achat-offre.php?id='<?=$answer['id_offre']?>/>
+<a href='./infos-achat-offre.php?id='<?$answer['id_offre']?>/>
     <div class='div-destination'>
         <img src='<?=$answer["url_image"]?>' class='img-destination' alt='Image représentant la destination'/>
         <div>
