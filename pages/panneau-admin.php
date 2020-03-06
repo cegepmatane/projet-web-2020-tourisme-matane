@@ -19,6 +19,8 @@
                 console.log("message = " + message);
                 if(message==="enregistré")
                     pDescription.innerHTML = "Description :<br> " + (input.value+"").split("\n").join("<br>");
+                if(message==="supprimé")
+                    divOffre.parentNode.removeChild(divOffre);
             }
         </script>
     </head>
@@ -73,7 +75,7 @@
                         </label>
                     </div>
                     <div class="destination-admin-item">
-                        <a href='../scripts/suppression-offre.php?id="<?= $tab["id_offre"] ?>"'>Supprimer</a>
+                        <a id="supprimer_<?= $tab["id_offre"] ?>" href="../scripts/suppression-offre.php">Supprimer</a>
                         <a href='../pages/formulaire-modifier-offre.php?id="<?= $tab["id_offre"] ?>"'>Modifier</a>
                     </div>
                 </div>
@@ -112,7 +114,7 @@
         <?php include("footer.html"); ?>
     </body>
     <script>
-        let idOffre = 5;
+        let idOffre = 1;
         let pDescription = document.getElementById(idOffre+"description");
         let pDescriptionEvent = function () {
             let text = pDescription.innerHTML.substr(18,pDescription.innerHTML.length);
@@ -130,5 +132,16 @@
         };
 
         pDescription.addEventListener("click",pDescriptionEvent);
+    </script>
+    <script>
+        let id_offre = 1;
+        let aOffre = document.getElementById("supprimer_"+id_offre);
+        aOffre.removeAttribute("href");
+        let divOffre = document.getElementById(id_offre);
+        aOffre.addEventListener("click", function(){
+            let ajax = new Ajax();
+            console.log(ajax);
+            ajax.executer("POST", "../scripts/ajax-suppression-offre.php?id="+id_offre,"",recevoirMessageServeur);
+        });
     </script>
 </html>
