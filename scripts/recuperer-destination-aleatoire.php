@@ -37,13 +37,14 @@ function recupererDestination($id){
 include ('connexion.php');
 $maximum = recupererNombreDestination();
 $answer = recupererDestination(rand(1, $maximum));
-
-$html =  "<a href=\"./infos-achat-offre.php?id=".$answer['id_offre']."\"/>";
-$html .=  "<div class=\"div-destination\">";
-$html .= "<img src=\"".$answer["url_image"]."\" class=\"img-destination\" alt=\"Image représentant la destination\"/>";
-$html .= "<div>";
-$html .= "<p>".$answer["description"]."</p>";
-$html .= "<p>Prix : ".$answer["prix"]." €</p>";
-$html .= "</div></div></a>";
-echo $html;
 ?>
+
+<a href='./infos-achat-offre.php?id='<?$answer['id_offre']?>/>
+    <div class='div-destination'>
+        <img src='<?=$answer["url_image"]?>' class='img-destination' alt='Image représentant la destination'/>
+        <div>
+            <p><?=$answer["description"]?></p>
+            <p>Prix : <?=$answer["prix"]?> €</p>
+        </div>
+    </div>
+</a>

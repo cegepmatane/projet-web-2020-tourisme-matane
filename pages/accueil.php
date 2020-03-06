@@ -9,12 +9,18 @@
         <title>Tourisme-Matane</title>
         <script>
             function afficherOffreAleatoire(){
-                var url='../scripts/recuperer-destination-aleatoire';
+                /*var url='../scripts/recuperer-destination-aleatoire';
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     document.getElementById("div-destination-aleatoire").innerHTML = this.responseText;
                 };
                 xhttp.open("GET", url, true);
+                xhttp.send();*/
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                        document.getElementById("div-destination-aleatoire").innerHTML = xhttp.responseText;
+                };
+                xhttp.open("GET", '../scripts/recuperer-destination-aleatoire.php', true);
                 xhttp.send();
             }
         </script>

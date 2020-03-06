@@ -47,3 +47,27 @@ include ('connexion.php');
         }
         return $answer;
     }
+
+    function recupererDestinationParVille($ville){
+        global $db;
+        $i = 0;
+        $answer = array();
+        $sql_command = "SELECT * from OFFRE WHERE ville LIKE '%".$ville."%'";
+        foreach ($db->query($sql_command) as $tab) {
+            $answer[$i] = array(
+                'prix' => $tab['prix'],
+                'description' => $tab['description'],
+                'ville' => $tab['ville'],
+                'url_image' => $tab['url_image'],
+                'debut' => $tab['debut'],
+                'duree' => $tab['duree'],
+                'sur_accueil' => $tab['sur_accueil'],
+                'id_offre' => $tab['id_offre'],
+                'prix_adulte' => $tab['prix_adulte'],
+                'prix_enfant' => $tab["prix_enfant"],
+                'prix_animal' => $tab["prix_animal"]
+            );
+            $i++;
+        }
+        return $answer;
+    }
