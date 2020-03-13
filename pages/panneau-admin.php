@@ -9,6 +9,9 @@
         <title>Tourisme-Matane</title>
         <script type="text/javascript" src="../librairies/Ajax.js"></script>
         <script>
+            let inputDescription;
+        </script>
+        <script>
             function recevoirMessageServeur(ajax)
             {
                 console.log("recevoirMessageServeur");
@@ -18,7 +21,7 @@
                 let message = reponse.message;
                 console.log("message = " + message);
                 if(message==="enregistré")
-                    pDescription.innerHTML = "Description :<br> " + (input.value+"").split("\n").join("<br>");
+                    pDescription.innerHTML = "Description :<br> " + (inputDescription.value+"").split("\n").join("<br>");
             }
         </script>
     </head>
@@ -118,12 +121,11 @@
             let text = pDescription.innerHTML.substr(18,pDescription.innerHTML.length);
             let idInput = Math.random() + "";
             pDescription.innerHTML ="<textarea id='"+idInput+"' style='height: 100%;'>"+text.split("<br>").join("\n")+"</textarea>";
-            let input = document.getElementById(idInput);
-            input.addEventListener("mouseout",function(){
+            inputDescription = document.getElementById(idInput);
+            inputDescription.addEventListener("mouseout",function(){
                 //Ajax
                 let ajax = new Ajax();
-                console.log(ajax);
-                ajax.executer("POST", "../scripts/ajax-modifier-offre.php","",recevoirMessageServeur);
+                ajax.executer("POST", "../scripts/ajax-modifier-offre.php?id="+idOffre+"&attribut=description&valeur="+inputDescription.value,"",recevoirMessageServeur);
                 pDescription.addEventListener("click",pDescriptionEvent);
             });
             pDescription.removeEventListener("click",arguments.callee);
